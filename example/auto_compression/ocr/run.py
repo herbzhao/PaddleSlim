@@ -23,9 +23,10 @@ from paddleslim.auto_compression import AutoCompression
 from paddleslim.common.dataloader import get_feed_vars
 
 import sys
-sys.path.append('../PaddleOCR')
-from ppocr.data import build_dataloader
-from ppocr.postprocess import build_post_process
+sys.path.append('PaddleOCR')
+
+from paddleocr.ppocr.data import build_dataloader
+from paddleocr.ppocr.postprocess import build_post_process
 from ppocr.metrics import build_metric
 
 logger = get_logger(__name__, level=logging.INFO)

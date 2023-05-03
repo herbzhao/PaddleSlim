@@ -21,7 +21,7 @@ from paddleslim.common import load_config as load_slim_config
 from paddleslim.common import get_logger
 
 import sys
-sys.path.append('../PaddleOCR')
+sys.path.append('PaddleOCR')
 from ppocr.data import build_dataloader
 from ppocr.postprocess import build_post_process
 from ppocr.metrics import build_metric

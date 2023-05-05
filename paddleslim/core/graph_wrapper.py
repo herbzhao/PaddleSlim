@@ -12,12 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import copy
+import os
 import pickle
-import numpy as np
 from collections import OrderedDict
 from collections.abc import Iterable
+
+import numpy as np
 import paddle
 
 __all__ = ['GraphWrapper', 'VarWrapper', 'OpWrapper']

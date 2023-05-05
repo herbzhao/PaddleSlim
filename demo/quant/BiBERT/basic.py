@@ -5,8 +5,9 @@ import paddle
 from paddle import tensor
 from paddle.autograd import PyLayer
 from paddle.nn import functional as F
-from paddle.nn.layer.common import Linear, Embedding
-from paddle.nn.layer.transformer import MultiHeadAttention, _convert_attention_mask
+from paddle.nn.layer.common import Embedding, Linear
+from paddle.nn.layer.transformer import (MultiHeadAttention,
+                                         _convert_attention_mask)
 
 
 class BinaryQuantizer(PyLayer):

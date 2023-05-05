@@ -12,16 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import copy
 import logging
 import sys
-import copy
-import numpy as np
 from functools import reduce
-from ..core import VarWrapper, OpWrapper, GraphWrapper
+
+import numpy as np
+
+from ..common import get_logger
+from ..core import GraphWrapper, OpWrapper, VarWrapper
 from .collections import StaticPruningCollections
 from .criterion import CRITERION
 from .idx_selector import IDX_SELECTOR
-from ..common import get_logger
 
 __all__ = ["Pruner"]
 

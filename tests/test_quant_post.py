@@ -12,15 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
 from paddleslim.quant import quant_post_static
 from static_case import StaticCase
+
 sys.path.append("../demo")
-from models import MobileNet
-from layers import conv_bn_layer
 import numpy as np
+from layers import conv_bn_layer
+
+from models import MobileNet
 
 
 class TestQuantAwareCase1(StaticCase):

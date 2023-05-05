@@ -14,8 +14,9 @@
 
 import abc
 from typing import Tuple
-import paddle
+
 import numpy as np
+import paddle
 
 from .uniform import UniformObserver
 

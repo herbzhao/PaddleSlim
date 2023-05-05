@@ -11,13 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import sys, os
+import os
+import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
 import paddleslim
 from paddleslim.analysis import LatencyPredictor, TableLatencyPredictor
-from paddleslim.analysis._utils import opt_model, save_cls_model, save_det_model
+from paddleslim.analysis._utils import (opt_model, save_cls_model,
+                                        save_det_model)
 
 
 def channel_shuffle(x, groups):

@@ -12,28 +12,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-import os
-import sys
 import logging
-import paddle
-import time
+import os
 import random
+import sys
+import time
+
 import numpy as np
-from paddleslim.common import get_logger
-from paddle.quantization import QuantConfig
+import paddle
+from paddle.quantization import QAT, QuantConfig
 from paddle.quantization.quanters import FakeQuanterWithAbsMaxObserver
-from paddle.quantization.quanters.abs_max import FakeQuanterWithAbsMaxObserverLayer
+from paddle.quantization.quanters.abs_max import \
+    FakeQuanterWithAbsMaxObserverLayer
+from paddleslim.common import get_logger
 from paddleslim.quant.quanters import PACTQuanter
-from paddle.quantization import QAT
 
 sys.path.append(os.path.join(os.path.dirname("__file__")))
+from args import SUPPORT_MODELS, parse_args
 from optimizer import create_optimizer
-from args import parse_args
-from args import SUPPORT_MODELS
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 

@@ -1,22 +1,23 @@
-import os
-import sys
 import argparse
-import json
 import functools
-from functools import partial
-import numpy as np
+import json
+import os
 import shutil
+import sys
+from functools import partial
+
+import numpy as np
 import paddle
 import paddle.nn as nn
-from paddle.io import Dataset, BatchSampler, DataLoader
-from paddlenlp.transformers import AutoModelForTokenClassification, AutoTokenizer
-from paddlenlp.datasets import load_dataset
-from paddlenlp.data import Stack, Tuple, Pad, Dict
+from paddle.io import BatchSampler, DataLoader, Dataset
+from paddlenlp.data import Dict, Pad, Stack, Tuple
 from paddlenlp.data.sampler import SamplerHelper
+from paddlenlp.datasets import load_dataset
 from paddlenlp.metrics import SpanEvaluator
-
-from paddleslim.common import load_config
+from paddlenlp.transformers import (AutoModelForTokenClassification,
+                                    AutoTokenizer)
 from paddleslim.auto_compression.compressor import AutoCompression
+from paddleslim.common import load_config
 
 
 def argsparser():

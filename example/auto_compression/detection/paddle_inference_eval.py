@@ -12,20 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import argparse
-import time
+import os
 import sys
+import time
+
 import cv2
 import numpy as np
-
 import paddle
-from paddle.inference import Config
-from paddle.inference import create_predictor
-from ppdet.core.workspace import load_config, create
-from ppdet.metrics import COCOMetric
-
+from paddle.inference import Config, create_predictor
 from post_process import PPYOLOEPostProcess
+from ppdet.core.workspace import create, load_config
+from ppdet.metrics import COCOMetric
 
 
 def argsparser():
@@ -304,9 +302,9 @@ def get_current_memory_mb():
     except:
         from pip._internal import main
         main(['install', 'GPUtil'])
-    import pynvml
-    import psutil
     import GPUtil
+    import psutil
+    import pynvml
 
     gpu_id = int(os.environ.get("CUDA_VISIBLE_DEVICES", 0))
 

@@ -12,22 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import sys
-import pickle
 import copy
-import logging
 import csv
-import numpy as np
+import logging
+import os
+import pickle
 import random
+import sys
 import tempfile
+
+import numpy as np
 import paddle
-from ..common import get_logger, load_inference_model
 from paddle.fluid.framework import IrGraph
 from paddle.framework import core
-
 from paddle.static.quantization import PostTrainingQuantization
+
+from ..common import get_logger, load_inference_model
 from .analysis_utils import *
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 SUPPORT_WEIGHT_OP_DICT = {

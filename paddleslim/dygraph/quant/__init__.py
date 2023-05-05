@@ -12,11 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from . import qat
-from . import ptq
-
-from .qat import *
+from . import ptq, qat
 from .ptq import *
+from .qat import *
 
 __all__ = []
 __all__ += qat.__all__

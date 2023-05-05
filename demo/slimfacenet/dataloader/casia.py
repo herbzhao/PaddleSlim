@@ -14,11 +14,14 @@
 # limitations under the License.
 import numpy as np
 import six
+
 if six.PY2:
     import scipy.misc as imgreader
 else:
     import imageio as imgreader
+
 import os
+
 import paddle
 
 

@@ -1,8 +1,9 @@
 import os
+
 import numpy as np
-from PIL import Image
 from paddle.io import Dataset
 from paddle.vision.transforms import transforms
+from PIL import Image
 
 
 class ImageNetDataset(Dataset):

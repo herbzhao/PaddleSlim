@@ -13,11 +13,10 @@
 # limitations under the License.
 
 import numpy as np
-
 import paddle
+import paddle.nn as nn
 from paddle import ParamAttr
 from paddle.regularizer import L2Decay
-import paddle.nn as nn
 
 from .base import BaseConv2DReper, ConvBNLayer
 

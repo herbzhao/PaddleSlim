@@ -13,23 +13,26 @@
 # limitations under the License.
 """train aware quant with infermodel"""
 
-import copy
-import os
 import argparse
+import copy
 import json
-import six
-from collections import namedtuple
-import time
+import logging
+import os
 import shutil
+import time
+from collections import namedtuple
+
 import numpy as np
 import paddle
-from ..common.recover_program import recover_inference_program
-from .quanter import _quant_config_default, _parse_configs, pact, get_pact_optimizer
-from .quanter import quant_aware, convert
-from ..dist import merge, l2, soft_label
+import six
+
 from ..auto_compression.create_compressed_program import build_distill_program
-import logging
 from ..common import get_logger
+from ..common.recover_program import recover_inference_program
+from ..dist import l2, merge, soft_label
+from .quanter import (_parse_configs, _quant_config_default, convert,
+                      get_pact_optimizer, pact, quant_aware)
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 ############################################################################################################

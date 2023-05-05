@@ -1,10 +1,12 @@
 import os
 import sys
 import unittest
+
 sys.path.append("../../")
 import numpy as np
 import paddle
 from paddleslim.auto_compression import AutoCompression
+
 paddle.enable_static()
 
 

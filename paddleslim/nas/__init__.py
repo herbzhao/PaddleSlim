@@ -12,15 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 from __future__ import absolute_import
-from ..nas import search_space
-from .search_space import *
-from ..nas import sa_nas
-from .sa_nas import *
-from .rl_nas import *
-from ..nas import darts
+
+from ..nas import darts, sa_nas, search_space
 from .darts import *
-from .ofa import *
 from .gp_nas import *
+from .ofa import *
+from .rl_nas import *
+from .sa_nas import *
+from .search_space import *
 
 __all__ = []
 __all__ += sa_nas.__all__

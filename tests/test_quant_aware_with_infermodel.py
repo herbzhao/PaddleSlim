@@ -11,21 +11,25 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import sys
 import os
+import sys
+
 sys.path.append("../")
 sys.path.append(".")
 sys.path[0] = os.path.join(os.path.dirname("__file__"), os.path.pardir)
-import unittest
 import copy
+import unittest
+
 import paddle
-from paddleslim.quant import quant_aware, convert
-from paddleslim.quant import quant_aware_with_infermodel, export_quant_infermodel
+from paddleslim.quant import (convert, export_quant_infermodel, quant_aware,
+                              quant_aware_with_infermodel)
 from static_case import StaticCase
+
 sys.path.append("../demo")
-from models import MobileNet
-from layers import conv_bn_layer
 import numpy as np
+from layers import conv_bn_layer
+
+from models import MobileNet
 
 
 class TestQuantAwareWithInferModelCase1(StaticCase):

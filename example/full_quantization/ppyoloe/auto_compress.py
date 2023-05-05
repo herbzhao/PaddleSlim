@@ -12,18 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
 import os
 import sys
+
 import numpy as np
-import argparse
 import paddle
-from ppdet.core.workspace import load_config, merge_config
-from ppdet.core.workspace import create
-from ppdet.metrics import COCOMetric, VOCMetric
-from paddleslim.common import load_config as load_slim_config
 from paddleslim.auto_compression import AutoCompression
-from post_process import PPYOLOEPostProcess
+from paddleslim.common import load_config as load_slim_config
 from paddleslim.common.dataloader import get_feed_vars
+from post_process import PPYOLOEPostProcess
+from ppdet.core.workspace import create, load_config, merge_config
+from ppdet.metrics import COCOMetric, VOCMetric
 
 
 def argsparser():

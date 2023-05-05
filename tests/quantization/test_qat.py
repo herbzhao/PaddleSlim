@@ -12,18 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
 import os
+import sys
 import unittest
+
 sys.path.append("../../")
-import paddle
 import tempfile
-from paddle.vision.models import resnet18
-from paddleslim.quant import SlimQuantConfig as QuantConfig
-from paddleslim.quant import SlimQAT
-from paddle.quantization.quanters import FakeQuanterWithAbsMaxObserver
-from paddle.quantization.quanters.abs_max import FakeQuanterWithAbsMaxObserverLayer
+
+import paddle
 from paddle.nn.quant.format import LinearDequanter, LinearQuanter
+from paddle.quantization.quanters import FakeQuanterWithAbsMaxObserver
+from paddle.quantization.quanters.abs_max import \
+    FakeQuanterWithAbsMaxObserverLayer
+from paddle.vision.models import resnet18
+from paddleslim.quant import SlimQAT
+from paddleslim.quant import SlimQuantConfig as QuantConfig
 
 
 def load_model_and_count_layer(model_path, layer_types):

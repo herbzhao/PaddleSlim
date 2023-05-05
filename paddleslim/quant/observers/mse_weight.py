@@ -15,6 +15,7 @@
 import numpy as np
 import paddle
 from paddle.quantization.factory import ObserverFactory
+
 from .abs_max_weight import AbsMaxChannelWiseWeightObserverLayer
 
 

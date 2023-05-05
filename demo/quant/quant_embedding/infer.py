@@ -1,11 +1,13 @@
 import argparse
+import os
 import sys
 import time
-import numpy as np
-import os
-import paddle
+
 import net
+import numpy as np
+import paddle
 import utils
+
 sys.path.append(sys.path[0] + "/../../../")
 from paddleslim.quant import quant_embedding
 

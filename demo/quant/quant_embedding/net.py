@@ -15,6 +15,7 @@
 neural network for word2vec
 """
 from __future__ import print_function
+
 import paddle
 import paddle.nn.functional as F
 

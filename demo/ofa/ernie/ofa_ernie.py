@@ -12,32 +12,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
+import json
+import logging
+import math
 import os
 import re
 import time
-import json
+from functools import partial, reduce
 from random import random
-from tqdm import tqdm
-from functools import reduce, partial
 
 import numpy as np
-import math
-import logging
-import argparse
-
 import paddle
-from paddleslim.nas.ofa import OFA, RunConfig, DistillConfig, utils
-
-from propeller import log
 import propeller.paddle as propeller
-
 from ernie.modeling_ernie import ErnieModelForSequenceClassification
-from ernie.tokenizing_ernie import ErnieTokenizer, ErnieTinyTokenizer
 from ernie.optimization import LinearDecay
-from ernie_supernet.importance import compute_neuron_head_importance, reorder_neuron_head
-from ernie_supernet.optimization import AdamW
+from ernie.tokenizing_ernie import ErnieTinyTokenizer, ErnieTokenizer
+from ernie_supernet.importance import (compute_neuron_head_importance,
+                                       reorder_neuron_head)
 from ernie_supernet.modeling_ernie_supernet import get_config
+from ernie_supernet.optimization import AdamW
+from paddleslim.nas.ofa import OFA, DistillConfig, RunConfig, utils
 from paddleslim.nas.ofa.convert_super import Convert, supernet
+from propeller import log
+from tqdm import tqdm
 
 
 def soft_cross_entropy(inp, target):

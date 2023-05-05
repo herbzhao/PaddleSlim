@@ -12,15 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import numpy as np
 import sys
-sys.path.append("../../")
-import unittest
-import logging
-import paddle
 
-from paddleslim.common import get_logger
+import numpy as np
+
+sys.path.append("../../")
+import logging
+import unittest
+
+import paddle
 from paddleslim import PTQ
+from paddleslim.common import get_logger
 
 _logger = get_logger(__name__, level=logging.INFO)
 

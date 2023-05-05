@@ -12,24 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import sys
-import math
-import time
-import numpy as np
-import paddle
-import logging
 import argparse
 import functools
+import logging
+import math
+import os
+import sys
+import time
+
+import numpy as np
+import paddle
 
 sys.path[0] = os.path.join(
     os.path.dirname("__file__"), os.path.pardir, os.path.pardir)
 sys.path[1] = os.path.join(
     os.path.dirname("__file__"), os.path.pardir, os.path.pardir, os.path.pardir)
+import imagenet_reader as reader
 from paddleslim.common import get_logger
 from paddleslim.quant import export_quant_infermodel
 from utility import add_arguments, print_arguments
-import imagenet_reader as reader
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 parser = argparse.ArgumentParser(description=__doc__)

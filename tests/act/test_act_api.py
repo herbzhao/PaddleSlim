@@ -1,14 +1,14 @@
-import sys
 import os
+import sys
+
 sys.path.append("../../")
-import unittest
 import tempfile
-import paddle
 import unittest
+
 import numpy as np
+import paddle
 from paddleslim.auto_compression import AutoCompression
-from paddleslim.common import load_config
-from paddleslim.common import load_inference_model, export_onnx
+from paddleslim.common import export_onnx, load_config, load_inference_model
 
 
 class RandomEvalDataset(paddle.io.Dataset):

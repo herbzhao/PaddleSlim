@@ -11,19 +11,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-import logging
 import copy
-import numpy as np
+import logging
 import math
 from multiprocessing.dummy import Pool as ThreadPool
 
+import numpy as np
 import paddle
 
 from ..common import get_logger
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 __all__ = ['quant_embedding']

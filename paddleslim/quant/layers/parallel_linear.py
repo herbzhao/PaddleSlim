@@ -15,7 +15,6 @@
 import paddle
 from paddle.nn import Layer
 from paddle.nn import functional as F
-
 from paddle.nn.quant.format import ConvertibleQuantedLayer
 
 

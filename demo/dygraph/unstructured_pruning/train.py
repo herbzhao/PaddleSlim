@@ -1,22 +1,25 @@
-import paddle
-import os
-import sys
 import argparse
+import os
 import random
+import sys
+
 import numpy as np
-from paddleslim import UnstructuredPruner, GMPUnstructuredPruner
+import paddle
+from paddleslim import GMPUnstructuredPruner, UnstructuredPruner
+
 sys.path.append(
     os.path.join(os.path.dirname("__file__"), os.path.pardir, os.path.pardir))
-from utility import add_arguments, print_arguments
-import paddle.vision.transforms as T
-import paddle.nn.functional as F
 import functools
-from paddle.vision.models import mobilenet_v1
-import time
 import logging
-from paddleslim.common import get_logger
+import time
+
 import paddle.distributed as dist
+import paddle.nn.functional as F
+import paddle.vision.transforms as T
 from paddle.distributed import ParallelEnv
+from paddle.vision.models import mobilenet_v1
+from paddleslim.common import get_logger
+from utility import add_arguments, print_arguments
 
 _logger = get_logger(__name__, level=logging.INFO)
 

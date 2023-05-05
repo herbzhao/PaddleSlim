@@ -12,13 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
+
 import numpy
 import paddle
-from static_case import StaticCase
-from paddleslim.prune import sensitivity, merge_sensitive, load_sensitivities, get_ratios_by_loss
 from layers import conv_bn_layer
+from paddleslim.prune import (get_ratios_by_loss, load_sensitivities,
+                              merge_sensitive, sensitivity)
+from static_case import StaticCase
 
 
 class TestSensitivity(StaticCase):

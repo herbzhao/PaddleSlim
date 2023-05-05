@@ -11,19 +11,23 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import sys
 import os
+import sys
+
 sys.path.append(".")
 sys.path[0] = os.path.join(os.path.dirname("__file__"), os.path.pardir)
 
-import paddle
 import unittest
+
+import paddle
 from paddleslim.quant import quant_post_hpo
 from static_case import StaticCase
+
 sys.path.append("../demo")
-from models import MobileNet
-from layers import conv_bn_layer
 import numpy as np
+from layers import conv_bn_layer
+
+from models import MobileNet
 
 
 class TestQuantPostHpoCase1(StaticCase):

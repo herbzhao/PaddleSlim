@@ -12,18 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
 import os
-import unittest
+import sys
 import tempfile
+import unittest
+
 sys.path.append("../../")
 import paddle
-from paddle.vision.models import resnet18
-from paddleslim.quant import SlimQuantConfig as QuantConfig
-from paddleslim.quant import SlimQAT
 from paddle.quantization.quanters import FakeQuanterWithAbsMaxObserver
-from paddleslim.quant.nn.conv_bn import QuantedConv2DBatchNorm
+from paddle.vision.models import resnet18
+from paddleslim.quant import SlimQAT
+from paddleslim.quant import SlimQuantConfig as QuantConfig
 from paddleslim.quant.constraints import FreezedConvBNConstraint
+from paddleslim.quant.nn.conv_bn import QuantedConv2DBatchNorm
 from test_qat import TestQuantAwareTraining, load_model_and_count_layer
 
 

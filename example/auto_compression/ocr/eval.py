@@ -12,18 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import logging
-import numpy as np
 import argparse
-from tqdm import tqdm
-import paddle
-from paddleslim.common import load_config as load_slim_config
-from paddleslim.common import get_logger
-
+import logging
 import sys
+
+import numpy as np
+import paddle
+from paddleslim.common import get_logger
+from paddleslim.common import load_config as load_slim_config
+from tqdm import tqdm
+
 sys.path.append('PaddleOCR')
-from ppocr.data import build_dataloader
-from ppocr.postprocess import build_post_process
+from paddleocr.ppocr.data import build_dataloader
+from paddleocr.ppocr.postprocess import build_post_process
 from ppocr.metrics import build_metric
 
 logger = get_logger(__name__, level=logging.INFO)

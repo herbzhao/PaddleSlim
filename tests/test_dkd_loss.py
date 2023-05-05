@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
-from paddleslim.dist import merge, dkd
 from layers import conv_bn_layer
+from paddleslim.dist import dkd, merge
 from static_case import StaticCase
 
 

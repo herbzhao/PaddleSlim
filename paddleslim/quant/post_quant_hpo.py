@@ -13,23 +13,22 @@
 # limitations under the License.
 """quant post with hyper params search"""
 
-import os
-import sys
-import math
-import time
-from time import gmtime, strftime
-import numpy as np
-import shutil
-import paddle
-import logging
 import argparse
 import functools
-import shutil
 import glob
-from scipy.stats import wasserstein_distance
+import logging
+import math
+import os
+import shutil
+import sys
+import time
+from time import gmtime, strftime
 
+import numpy as np
+import paddle
 from paddleslim.common import get_logger
 from paddleslim.quant import quant_post
+from scipy.stats import wasserstein_distance
 
 _logger = get_logger(__name__, level=logging.INFO)
 
@@ -421,8 +420,9 @@ def quant_post_hpo(
             "smac==1.4.0 is required, please use \"pip install smac==1.4.0\".")
         os.system('python -m pip install smac==1.4.0')
 
-    from ConfigSpace.hyperparameters import CategoricalHyperparameter, \
-        UniformFloatHyperparameter, UniformIntegerHyperparameter
+    from ConfigSpace.hyperparameters import (CategoricalHyperparameter,
+                                             UniformFloatHyperparameter,
+                                             UniformIntegerHyperparameter)
     from smac.configspace import ConfigurationSpace
     from smac.facade.smac_hpo_facade import SMAC4HPO
     from smac.scenario.scenario import Scenario

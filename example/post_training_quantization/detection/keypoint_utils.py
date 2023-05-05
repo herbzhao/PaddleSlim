@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and   
 # limitations under the License.
 
-import logging
-import numpy as np
-import cv2
 import copy
+import logging
+
+import cv2
+import numpy as np
 from paddleslim.common import get_logger
 
 logger = get_logger(__name__, level=logging.INFO)

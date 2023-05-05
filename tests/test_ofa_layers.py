@@ -13,12 +13,14 @@
 # limitations under the License.
 
 import sys
+
 sys.path.append("../")
-import numpy as np
 import unittest
+
+import numpy as np
 import paddle
 from paddleslim.nas import ofa
-from paddleslim.nas.ofa import OFA, RunConfig, DistillConfig
+from paddleslim.nas.ofa import OFA, DistillConfig, RunConfig
 from paddleslim.nas.ofa.layers import *
 from paddleslim.nas.ofa.layers_base import Block
 

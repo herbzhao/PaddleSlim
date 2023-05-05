@@ -12,19 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
+
+import math
 
 import numpy as np
 import paddle
 import paddle.nn as nn
 import paddle.nn.functional as F
-from paddle.nn import Conv2D, BatchNorm, Linear, Dropout
-from paddle.nn import AdaptiveAvgPool2D, MaxPool2D, AvgPool2D
+from paddle.nn import (AdaptiveAvgPool2D, AvgPool2D, BatchNorm, Conv2D,
+                       Dropout, Linear, MaxPool2D)
 from paddle.regularizer import L2Decay
-
-import math
 
 __all__ = [
     "MobileNetV3_small_x0_35", "MobileNetV3_small_x0_5",

@@ -12,15 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
-from paddleslim.quant import quant_aware, convert
+from paddleslim.quant import convert, quant_aware
 from static_case import StaticCase
+
 sys.path.append("../demo")
-from models import MobileNet
-from layers import conv_bn_layer
 import numpy as np
+from layers import conv_bn_layer
+
+from models import MobileNet
 
 
 def pact(x):

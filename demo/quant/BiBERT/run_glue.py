@@ -14,24 +14,23 @@
 
 import argparse
 import logging
-import os
-import sys
-import random
-import time
 import math
+import os
+import random
+import sys
+import time
 from functools import partial
 
 import numpy as np
 import paddle
 from paddle.io import DataLoader
-from paddle.metric import Metric, Accuracy, Precision, Recall
-
-from paddlenlp.datasets import load_dataset
-from paddlenlp.data import Stack, Tuple, Pad, Dict
+from paddle.metric import Accuracy, Metric, Precision, Recall
+from paddlenlp.data import Dict, Pad, Stack, Tuple
 from paddlenlp.data.sampler import SamplerHelper
-from paddlenlp.transformers import AutoTokenizer, AutoModelForSequenceClassification
-from paddlenlp.transformers import LinearDecayWithWarmup
+from paddlenlp.datasets import load_dataset
 from paddlenlp.metrics import AccuracyAndF1, Mcc, PearsonAndSpearman
+from paddlenlp.transformers import (AutoModelForSequenceClassification,
+                                    AutoTokenizer, LinearDecayWithWarmup)
 
 FORMAT = '%(asctime)s-%(levelname)s: %(message)s'
 logging.basicConfig(level=logging.INFO, format=FORMAT)

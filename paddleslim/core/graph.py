@@ -14,6 +14,7 @@
 """ A structure used to describe the network of a model."""
 
 from typing import List, Tuple
+
 import paddle
 
 __all__ = ["Graph"]

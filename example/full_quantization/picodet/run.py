@@ -12,19 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
 import os
 import sys
-import numpy as np
-import argparse
-import paddle
-from tqdm import tqdm
-from ppdet.core.workspace import load_config, merge_config
-from ppdet.core.workspace import create
-from ppdet.metrics import COCOMetric, VOCMetric, KeyPointTopDownCOCOEval
-from paddleslim.common import load_config as load_slim_config
-from paddleslim.auto_compression import AutoCompression
 
+import numpy as np
+import paddle
+from paddleslim.auto_compression import AutoCompression
+from paddleslim.common import load_config as load_slim_config
 from post_process import PicoDetPostProcess
+from ppdet.core.workspace import create, load_config, merge_config
+from ppdet.metrics import COCOMetric, KeyPointTopDownCOCOEval, VOCMetric
+from tqdm import tqdm
 
 
 def argsparser():

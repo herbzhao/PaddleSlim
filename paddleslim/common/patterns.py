@@ -15,10 +15,11 @@
 import logging
 import os
 import sys
-import numpy as np
 import warnings
 
+import numpy as np
 import paddle
+
 from ..core import GraphWrapper
 from .patterns_common import *
 

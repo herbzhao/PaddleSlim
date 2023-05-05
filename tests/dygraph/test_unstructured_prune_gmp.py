@@ -1,9 +1,11 @@
 import sys
+
 sys.path.append("../../")
 import unittest
-import paddle
+
 import numpy as np
-from paddleslim import UnstructuredPruner, GMPUnstructuredPruner
+import paddle
+from paddleslim import GMPUnstructuredPruner, UnstructuredPruner
 
 
 class TestUnstructuredPruner(unittest.TestCase):

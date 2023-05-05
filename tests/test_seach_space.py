@@ -12,15 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import os
 import sys
 import unittest
-import paddle
-from static_case import StaticCase
-from paddleslim.nas import SANAS
-from paddleslim.analysis import flops
+
 import numpy as np
+import paddle
+from paddleslim.analysis import flops
+from paddleslim.nas import SANAS
+from static_case import StaticCase
 
 
 class TestDartsSpace(StaticCase):

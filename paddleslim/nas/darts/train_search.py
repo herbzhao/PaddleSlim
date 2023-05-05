@@ -12,19 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
+
 import paddle
 
 __all__ = ['DARTSearch', 'count_parameters_in_MB']
 
-import os
 import logging
+import os
+
 import numpy as np
+
 from ...common import AvgrageMeter, get_logger
 from .architect import Architect
 from .get_genotype import get_genotype
+
 logger = get_logger(__name__, level=logging.INFO)
 
 

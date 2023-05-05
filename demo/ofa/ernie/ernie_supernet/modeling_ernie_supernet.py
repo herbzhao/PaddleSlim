@@ -12,20 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import division
-from __future__ import absolute_import
-from __future__ import print_function
-from __future__ import unicode_literals
+from __future__ import (absolute_import, division, print_function,
+                        unicode_literals)
 
-import sys
-import os
-import math
 import argparse
 import json
 import logging
-import logging
+import math
+import os
+import sys
 from functools import partial
+
 import six
+
 if six.PY2:
     from pathlib2 import Path
 else:
@@ -33,7 +32,9 @@ else:
 
 import paddle
 from ernie.file_utils import _fetch_from_remote
-from ernie.modeling_ernie import AttentionLayer, ErnieBlock, ErnieModel, ErnieEncoderStack, ErnieModelForSequenceClassification
+from ernie.modeling_ernie import (AttentionLayer, ErnieBlock,
+                                  ErnieEncoderStack, ErnieModel,
+                                  ErnieModelForSequenceClassification)
 
 log = logging.getLogger(__name__)
 

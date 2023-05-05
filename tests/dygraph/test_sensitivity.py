@@ -12,14 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../../")
-import unittest
 import time
+import unittest
+
 import numpy as np
 import paddle
 from paddle.static import InputSpec as Input
-from paddleslim.prune import sensitivity
 from paddleslim.dygraph import L1NormFilterPruner
+from paddleslim.prune import sensitivity
 
 
 class TestSensitivity(unittest.TestCase):

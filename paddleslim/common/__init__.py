@@ -11,23 +11,22 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from .controller import EvolutionaryController, RLBaseController
-from .sa_controller import SAController
-from .log_helper import get_logger
-from .controller_server import ControllerServer
-from .controller_client import ControllerClient
-from .lock import lock, unlock
-from .cached_reader import cached_reader
-from .server import Server
-from .client import Client
-from .meter import AvgrageMeter
+from . import patterns, recover_program, wrapper_function
 from .analyze_helper import VarCollector
-from . import wrapper_function
-from . import recover_program
-from . import patterns
-from .load_model import load_inference_model, get_model_dir, load_onnx_model, export_onnx
-from .dataloader import wrap_dataloader, get_feed_vars
+from .cached_reader import cached_reader
+from .client import Client
 from .config_helper import load_config, save_config
+from .controller import EvolutionaryController, RLBaseController
+from .controller_client import ControllerClient
+from .controller_server import ControllerServer
+from .dataloader import get_feed_vars, wrap_dataloader
+from .load_model import (export_onnx, get_model_dir, load_inference_model,
+                         load_onnx_model)
+from .lock import lock, unlock
+from .log_helper import get_logger
+from .meter import AvgrageMeter
+from .sa_controller import SAController
+from .server import Server
 
 __all__ = [
     'EvolutionaryController', 'SAController', 'get_logger', 'ControllerServer',

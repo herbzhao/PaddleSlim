@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import os
+
 __All__ = ['lock', 'unlock']
 if os.name == 'nt':
 
@@ -23,7 +24,7 @@ if os.name == 'nt':
         raise NotImplementedError('Windows is not supported.')
 
 elif os.name == 'posix':
-    from fcntl import flock, LOCK_EX, LOCK_UN
+    from fcntl import LOCK_EX, LOCK_UN, flock
 
     def lock(file):
         """Lock the file in local file system."""

@@ -12,16 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .mobilenetv2 import MobileNetV2Space
-from .mobilenetv1 import MobileNetV1Space
-from .resnet import ResNetSpace
-from .mobilenet_block import MobileNetV1BlockSpace, MobileNetV2BlockSpace
-from .resnet_block import ResNetBlockSpace
-from .inception_block import InceptionABlockSpace
 from .darts_space import DartsSpace
-from .search_space_registry import SEARCHSPACE
-from .search_space_factory import SearchSpaceFactory
+from .inception_block import InceptionABlockSpace
+from .mobilenet_block import MobileNetV1BlockSpace, MobileNetV2BlockSpace
+from .mobilenetv1 import MobileNetV1Space
+from .mobilenetv2 import MobileNetV2Space
+from .resnet import ResNetSpace
+from .resnet_block import ResNetBlockSpace
 from .search_space_base import SearchSpaceBase
+from .search_space_factory import SearchSpaceFactory
+from .search_space_registry import SEARCHSPACE
+
 __all__ = [
     'MobileNetV1Space', 'MobileNetV2Space', 'ResNetSpace', 'DartsSpace',
     'MobileNetV1BlockSpace', 'MobileNetV2BlockSpace', 'ResNetBlockSpace',

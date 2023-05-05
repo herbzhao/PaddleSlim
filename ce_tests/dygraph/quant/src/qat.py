@@ -12,28 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import division
-from __future__ import print_function
+from __future__ import division, print_function
 
 import argparse
 import contextlib
-import os
-
-import time
 import math
+import os
+import time
+
 import numpy as np
-
 import paddle
-from paddle.distributed import ParallelEnv
-
-from paddle.optimizer.lr import PiecewiseDecay
-from paddle.metric.metrics import Accuracy
 import paddle.vision.models as models
-
-from paddleslim import QAT
-from paddle.quantization import ImperativeQuantAware
-
 from imagenet_dataset import ImageNetDataset
+from paddle.distributed import ParallelEnv
+from paddle.metric.metrics import Accuracy
+from paddle.optimizer.lr import PiecewiseDecay
+from paddle.quantization import ImperativeQuantAware
+from paddleslim import QAT
 
 
 def make_optimizer(step_per_epoch, parameter_list=None):

@@ -12,13 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import numpy as np
 import sys
-sys.path.append("../../")
-import unittest
-import logging
-import paddle
 
+import numpy as np
+
+sys.path.append("../../")
+import logging
+import unittest
+
+import paddle
 from paddleslim.common import get_logger
 from paddleslim.dygraph.quant import QAT
 

@@ -12,14 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from ..core import graph_wrapper
-from .graph_wrapper import *
-from ..core import registry
-from .registry import *
-from ..core import dygraph
+from ..core import dygraph, graph_wrapper, registry
 from .dygraph import *
-from .graph_tracer import GraphTracer
 from .graph import Graph
+from .graph_tracer import GraphTracer
+from .graph_wrapper import *
+from .registry import *
 
 __all__ = []
 __all__ += graph_wrapper.__all__

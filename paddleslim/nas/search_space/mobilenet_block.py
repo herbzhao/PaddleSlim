@@ -12,16 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
 import numpy as np
 import paddle
-from .search_space_base import SearchSpaceBase
+
 from .base_layer import conv_bn_layer
+from .search_space_base import SearchSpaceBase
 from .search_space_registry import SEARCHSPACE
-from .utils import compute_downsample_num, check_points, get_random_tokens
+from .utils import check_points, compute_downsample_num, get_random_tokens
 
 __all__ = ["MobileNetV1BlockSpace", "MobileNetV2BlockSpace"]
 

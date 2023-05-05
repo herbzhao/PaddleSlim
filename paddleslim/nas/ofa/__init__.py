@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .ofa import OFA, RunConfig, DistillConfig
 from .convert_super import supernet
-from .utils.special_config import *
 from .get_sub_model import *
 from .layers import *
+from .ofa import OFA, DistillConfig, RunConfig
+from .utils.special_config import *

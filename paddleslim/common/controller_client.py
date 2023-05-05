@@ -12,12 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import time
 import logging
+import os
 import socket
-from .log_helper import get_logger
 import sys
+import time
+
+from .log_helper import get_logger
+
 __all__ = ['ControllerClient']
 
 _logger = get_logger(__name__, level=logging.INFO)

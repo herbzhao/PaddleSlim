@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import logging
+import os
+
 import numpy as np
-from ..core import Registry
+
 from ..common import get_logger
+from ..core import Registry
 
 __all__ = ["PRUNE_WORKER", "conv2d", "UnsupportOpError"]
 

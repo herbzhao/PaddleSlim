@@ -12,32 +12,38 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import logging
-import os
-import sys
-import copy
-import numpy as np
 import copy
 import inspect
-import shutil
-from time import gmtime, strftime
-import platform
-import paddle
 import itertools
+import logging
+import os
+import platform
+import shutil
+import sys
+from time import gmtime, strftime
+
+import numpy as np
+import paddle
 import paddle.distributed.fleet as fleet
+
+from ..analysis import TableLatencyPredictor
+from ..common import get_logger
+from ..common.config_helper import load_config
+from ..common.dataloader import get_feed_vars, wrap_dataloader
+from ..common.load_model import (export_onnx, get_model_dir,
+                                 load_inference_model)
+from ..common.patterns import find_final_nodes, get_patterns
+from ..common.recover_program import recover_inference_program
 from ..quant.quanter import convert, quant_post
 from ..quant.reconstruction_quantization import quant_recon_static
-from ..common.recover_program import recover_inference_program
-from ..common import get_logger
-from ..common.patterns import get_patterns, find_final_nodes
-from ..common.load_model import load_inference_model, get_model_dir, export_onnx
-from ..common.dataloader import wrap_dataloader, get_feed_vars
-from ..common.config_helper import load_config
-from ..analysis import TableLatencyPredictor
-from .create_compressed_program import build_distill_program, build_quant_program, build_prune_program, remove_unused_var_nodes
-from .strategy_config import TrainConfig, ProgramInfo, merge_config
-from .auto_strategy import prepare_strategy, get_final_quant_config, create_strategy_config, create_train_config
+from .auto_strategy import (create_strategy_config, create_train_config,
+                            get_final_quant_config, prepare_strategy)
 from .config_helpers import extract_strategy_config, extract_train_config
+from .create_compressed_program import (build_distill_program,
+                                        build_prune_program,
+                                        build_quant_program,
+                                        remove_unused_var_nodes)
+from .strategy_config import ProgramInfo, TrainConfig, merge_config
 from .utils.predict import with_variable_shape
 
 _logger = get_logger(__name__, level=logging.INFO)
@@ -521,6 +527,7 @@ class AutoCompression:
                 test_program_info)
         if train_config.sparse_model:
             from ..prune.unstructured_pruner import UnstructuredPruner
+
             # NOTE: The initialization parameter of this pruner doesn't work, it is only used to call the 'set_static_masks' function
             self._pruner = UnstructuredPruner(
                 train_program_info.program,

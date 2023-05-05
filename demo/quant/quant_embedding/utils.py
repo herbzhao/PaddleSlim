@@ -1,11 +1,12 @@
-import sys
 import collections
-import six
+import os
+import sys
 import time
+
 import numpy as np
 import paddle
-import os
 import preprocess
+import six
 
 
 def BuildWord_IdMap(dict_path):

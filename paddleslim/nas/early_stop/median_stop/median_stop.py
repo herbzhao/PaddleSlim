@@ -14,8 +14,9 @@
 
 import logging
 from multiprocessing.managers import BaseManager
-from ..early_stop import EarlyStopBase
+
 from ....common.log_helper import get_logger
+from ..early_stop import EarlyStopBase
 
 PublicAuthKey = u'AbcXyz3'
 

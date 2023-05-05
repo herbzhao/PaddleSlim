@@ -13,10 +13,12 @@
 # limitations under the License.
 
 import sys
+
 sys.path.append("../")
-import json
 import copy
+import json
 import unittest
+
 import numpy as np
 from paddleslim.nas import GPNAS
 from static_case import StaticCase

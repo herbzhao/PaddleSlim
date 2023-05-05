@@ -1,10 +1,11 @@
-import numpy as np
-from scipy import optimize
 import math
-import paddle
 
-from .CKA import cka
+import numpy as np
+import paddle
+from scipy import optimize
+
 from .Cifar.utils.utils import sum_list
+from .CKA import cka
 
 __all__ = ['ITPruner']
 

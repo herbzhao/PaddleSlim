@@ -15,9 +15,11 @@
 # limitations under the License.
 
 import logging
+
 import numpy as np
+
 from ..common import get_logger
-from ..core import Registry, GraphWrapper
+from ..core import GraphWrapper, Registry
 
 __all__ = ["l1_norm", "CRITERION"]
 

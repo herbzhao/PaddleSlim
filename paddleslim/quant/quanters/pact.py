@@ -13,15 +13,16 @@
 # limitations under the License.
 
 import abc
-import paddle
-import numpy as np
 import math
+
+import numpy as np
+import paddle
 from paddle.framework import ParamAttr
 from paddle.nn import Layer
 from paddle.nn.initializer import Constant
-from paddle.utils import unique_name
-from paddle.quantization.factory import QuanterFactory
 from paddle.quantization.base_quanter import BaseQuanter
+from paddle.quantization.factory import QuanterFactory
+from paddle.utils import unique_name
 
 
 class PACTQuanter(QuanterFactory):

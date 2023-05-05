@@ -1,21 +1,22 @@
-import os
-import sys
-import logging
-import paddle
 import argparse
 import functools
+import logging
 import math
-import time
+import os
 import random
+import sys
+import time
+
 import numpy as np
 import paddle
 
 sys.path[0] = os.path.join(
     os.path.dirname("__file__"), os.path.pardir, os.path.pardir)
+import imagenet_reader as reader
 from paddleslim.common import get_logger
 from paddleslim.quant import quant_post_static
 from utility import add_arguments, print_arguments
-import imagenet_reader as reader
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 parser = argparse.ArgumentParser(description=__doc__)

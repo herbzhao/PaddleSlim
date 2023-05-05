@@ -1,9 +1,10 @@
 import argparse
-import six
 from inspect import isfunction
 from types import FunctionType
 from typing import Dict
+
 import paddle.vision.models as models
+import six
 
 SUPPORT_MODELS: Dict[str, FunctionType] = {}
 for _name, _module in models.__dict__.items():

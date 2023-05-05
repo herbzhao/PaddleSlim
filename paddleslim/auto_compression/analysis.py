@@ -1,10 +1,12 @@
-import sys
-import pickle
 import logging
+import pickle
+import sys
+
 import paddle
+
 from ..common import get_logger
 from ..common.load_model import load_inference_model
-from ..prune import sensitivity, get_ratios_by_loss
+from ..prune import get_ratios_by_loss, sensitivity
 
 _logger = get_logger(__name__, level=logging.INFO)
 

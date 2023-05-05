@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import sys
-import random
-import numpy as np
 import argparse
+import os
+import random
+import sys
 import time
 
+import numpy as np
 import paddle
 from paddleslim.common import load_config as load_slim_config
 from paddleslim.quant.analysis import Analysis

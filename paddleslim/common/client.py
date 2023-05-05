@@ -12,20 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import logging
 import os
 import signal
-import zmq
 import socket
-import logging
-import time
 import threading
+import time
+
 import six
+import zmq
+
 if six.PY2:
     import cPickle as pickle
 else:
     import pickle
+
 from .log_helper import get_logger
-from .rl_controller.utils import compute_grad, ConnectMessage
+from .rl_controller.utils import ConnectMessage, compute_grad
 
 _logger = get_logger(__name__, level=logging.INFO)
 

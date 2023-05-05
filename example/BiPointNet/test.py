@@ -13,11 +13,12 @@
 # limitations under the License.
 
 import argparse
+
 import paddle
-from paddle.io import DataLoader
-from paddle.metric import Accuracy
 from data import ModelNetDataset
 from model import PointNetClassifier
+from paddle.io import DataLoader
+from paddle.metric import Accuracy
 
 
 def parse_args():

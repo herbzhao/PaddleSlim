@@ -12,20 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-from PIL import Image
-from PIL import ImageOps
-import os
+import functools
 import math
+import os
 import random
 import tarfile
-import functools
+
 import numpy as np
-from PIL import Image, ImageEnhance
 import paddle
+from PIL import Image, ImageEnhance, ImageOps
+
 # for python2/python3 compatiablity
 try:
     import cPickle

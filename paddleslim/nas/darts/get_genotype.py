@@ -12,12 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-import paddle
+from __future__ import absolute_import, division, print_function
 
 from collections import namedtuple
+
+import paddle
 
 Genotype = namedtuple('Genotype', 'normal normal_concat reduce reduce_concat')
 

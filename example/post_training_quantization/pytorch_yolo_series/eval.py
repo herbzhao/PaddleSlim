@@ -12,16 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
 import os
 import sys
+
 import numpy as np
-import argparse
-from tqdm import tqdm
 import paddle
+from dataset import COCOValDataset
 from paddleslim.common import load_config as load_slim_config
 from paddleslim.common import load_inference_model
 from post_process import YOLOPostProcess, coco_metric
-from dataset import COCOValDataset
+from tqdm import tqdm
 
 
 def argsparser():

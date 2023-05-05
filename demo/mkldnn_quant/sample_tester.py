@@ -12,16 +12,17 @@
 # see the license for the specific language governing permissions and
 # limitations under the license.
 
-import unittest
-import os
-import sys
 import argparse
 import logging
+import os
 import struct
-import six
-import numpy as np
+import sys
 import time
+import unittest
+
+import numpy as np
 import paddle
+import six
 from paddle.fluid.framework import IrGraph
 from paddle.framework import core
 

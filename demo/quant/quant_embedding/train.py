@@ -1,16 +1,17 @@
 from __future__ import print_function
+
 import argparse
 import logging
-import os
-import time
 import math
+import os
 import random
+import time
+
 import numpy as np
 import paddle
-import six
 import reader
+import six
 from net import skip_gram_word2vec
-import paddle
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("paddle")

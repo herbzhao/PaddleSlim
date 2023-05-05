@@ -1,9 +1,10 @@
+import copy
+import logging
+
 import numpy as np
 import paddle
-import logging
 from paddleslim.common import get_logger
 from paddleslim.prune.unstructured_pruner_utils import *
-import copy
 
 __all__ = ["UnstructuredPruner", "GMPUnstructuredPruner"]
 

@@ -13,26 +13,21 @@
 # limitations under the License.
 
 from __future__ import absolute_import
-from .pruner import *
-from ..prune import pruner
+
+from ..prune import (auto_pruner, collections, criterion, idx_selector,
+                     prune_io, prune_worker, pruner, sensitive,
+                     unstructured_pruner, unstructured_pruner_utils)
 from .auto_pruner import *
-from ..prune import auto_pruner
-from .sensitive import *
-from ..prune import sensitive
-from .prune_worker import *
-from ..prune import prune_worker
-from .prune_io import *
-from ..prune import prune_io
-from .criterion import *
-from ..prune import criterion
 from .collections import *
-from ..prune import collections
-from .unstructured_pruner import *
-from ..prune import unstructured_pruner
-from .unstructured_pruner_utils import *
-from ..prune import unstructured_pruner_utils
+from .criterion import *
 from .idx_selector import *
-from ..prune import idx_selector
+from .prune_io import *
+from .prune_worker import *
+from .pruner import *
+from .sensitive import *
+from .unstructured_pruner import *
+from .unstructured_pruner_utils import *
+
 __all__ = []
 
 __all__ += pruner.__all__

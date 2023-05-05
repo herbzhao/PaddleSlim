@@ -12,8 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
 import os
+import sys
+
 from paddleslim.utils.download import download_file_and_uncompress
 
 LOCAL_PATH = os.path.dirname(os.path.abspath(__file__))

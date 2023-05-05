@@ -1,14 +1,16 @@
-import os
-import logging
-import numpy as np
-import pickle
 import copy
+import logging
+import os
+import pickle
+
+import numpy as np
 import paddle
-from paddleslim.common import get_logger
-from .var_group import *
-from .pruning_plan import *
-from .pruner import Pruner
 from paddleslim.analysis import dygraph_flops as flops
+from paddleslim.common import get_logger
+
+from .pruner import Pruner
+from .pruning_plan import *
+from .var_group import *
 from .var_group import DygraphPruningCollections
 
 __all__ = ['Status', 'FilterPruner']

@@ -1,21 +1,23 @@
-from __future__ import division
-from __future__ import print_function
-import os
-import sys
-import logging
-import paddle
+from __future__ import division, print_function
+
 import argparse
 import functools
+import logging
 import math
+import os
+import sys
 import time
+
 import numpy as np
+import paddle
+
 sys.path.append(
     os.path.join(os.path.dirname("__file__"), os.path.pardir, os.path.pardir))
-import paddleslim
-from paddleslim.common import get_logger
 import paddle.vision.models as models
-from utility import add_arguments, print_arguments
+import paddleslim
 from paddle.jit import to_static
+from paddleslim.common import get_logger
+from utility import add_arguments, print_arguments
 
 _logger = get_logger(__name__, level=logging.INFO)
 

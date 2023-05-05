@@ -12,19 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import sys
 import argparse
 import functools
+import os
+import sys
 from functools import partial
 
 import numpy as np
 import paddle
 import paddle.nn as nn
-from paddle.io import DataLoader, DistributedBatchSampler
 from imagenet_reader import ImageNetDataset
-from paddleslim.common import load_config as load_slim_config
+from paddle.io import DataLoader, DistributedBatchSampler
 from paddleslim.auto_compression import AutoCompression
+from paddleslim.common import load_config as load_slim_config
 
 
 def argsparser():

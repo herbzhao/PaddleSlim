@@ -10,38 +10,38 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
+import collections
 import copy
 import json
 import logging
-import collections
-import numpy as np
+import os
 
+import numpy as np
 import paddle
-from paddle.framework import core
-from paddle.fluid.layer_helper import LayerHelper
 from paddle.fluid.framework import IrGraph
-from paddle.static.quantization import WeightQuantization
-from paddle.static.quantization import QuantizationTransformPass
-from paddle.static.quantization import QuantizationFreezePass
-from paddle.static.quantization import ConvertToInt8Pass
-from paddle.static.quantization import PostTrainingQuantization
-from paddle.static.quantization import AddQuantDequantPass
-from paddle.static.quantization import OutScaleForTrainingPass
-from paddle.static.quantization import OutScaleForInferencePass
+from paddle.fluid.layer_helper import LayerHelper
+from paddle.framework import core
+from paddle.static.quantization import (AddQuantDequantPass, ConvertToInt8Pass,
+                                        OutScaleForInferencePass,
+                                        OutScaleForTrainingPass,
+                                        PostTrainingQuantization,
+                                        QuantizationFreezePass,
+                                        QuantizationTransformPass,
+                                        WeightQuantization)
+
 from ..common import get_logger
 from ..common.patterns import get_patterns
-from ..common.patterns_common import has_trainable_var, get_weight
+from ..common.patterns_common import get_weight, has_trainable_var
 from ..core.graph_wrapper import GraphWrapper
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 try:
-    from paddle.static.quantization import QuantizationTransformPassV2
-    from paddle.static.quantization import QuantWeightPass
-    from paddle.static.quantization import AddQuantDequantPassV2
-    from paddle.static.quantization import PostTrainingQuantizationProgram
-    from paddle.static.quantization import AddQuantDequantForInferencePass
-    from paddle.static.quantization import quant_config
+    from paddle.static.quantization import (AddQuantDequantForInferencePass,
+                                            AddQuantDequantPassV2,
+                                            PostTrainingQuantizationProgram,
+                                            QuantizationTransformPassV2,
+                                            QuantWeightPass, quant_config)
 except:
     _logger.warning(
         "Some functions failed to import, better to update PaddlePaddle to the latest develop version."

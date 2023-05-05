@@ -13,8 +13,11 @@
 # limitations under the License.
 
 import re
+
 import numpy as np
+
 from .parse_ops import get_key_from_op
+
 __all__ = ["get_data_from_tables", "get_features_from_paramkey"]
 
 

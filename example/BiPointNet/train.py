@@ -12,15 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import argparse
+import os
+
 import paddle
+from data import ModelNetDataset
+from model import CrossEntropyMatrixRegularization, PointNetClassifier
 from paddle.io import DataLoader
 from paddle.metric import Accuracy
 from paddle.optimizer import Adam
 from paddle.optimizer.lr import CosineAnnealingDecay
-from data import ModelNetDataset
-from model import CrossEntropyMatrixRegularization, PointNetClassifier
 
 
 def parse_args():

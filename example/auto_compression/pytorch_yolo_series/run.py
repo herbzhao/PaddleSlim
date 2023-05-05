@@ -12,16 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
 import os
 import sys
+
 import numpy as np
-import argparse
-from tqdm import tqdm
 import paddle
-from paddleslim.common import load_config
+from dataset import COCOTrainDataset, COCOValDataset, yolo_image_preprocess
 from paddleslim.auto_compression import AutoCompression
-from dataset import COCOValDataset, COCOTrainDataset, yolo_image_preprocess
+from paddleslim.common import load_config
 from post_process import YOLOPostProcess, coco_metric
+from tqdm import tqdm
 
 
 def argsparser():

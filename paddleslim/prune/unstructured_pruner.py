@@ -1,9 +1,11 @@
+import copy
+
 import numpy as np
+import paddle
+from paddleslim.prune.unstructured_pruner_utils import *
+
 from ..common import get_logger
 from ..core import GraphWrapper
-from paddleslim.prune.unstructured_pruner_utils import *
-import paddle
-import copy
 
 __all__ = ["UnstructuredPruner", "GMPUnstructuredPruner"]
 

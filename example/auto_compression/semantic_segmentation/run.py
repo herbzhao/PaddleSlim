@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import argparse
+import os
 import random
-import paddle
-import numpy as np
-from paddleseg.cvlibs import Config as PaddleSegDataConfig
-from paddleseg.utils import worker_init_fn, metrics
-from paddleseg.core.infer import reverse_transform
 
+import numpy as np
+import paddle
+from paddleseg.core.infer import reverse_transform
+from paddleseg.cvlibs import Config as PaddleSegDataConfig
+from paddleseg.utils import metrics, worker_init_fn
 from paddleslim.auto_compression import AutoCompression
 from paddleslim.common import load_config as load_slim_config
 from paddleslim.common.dataloader import get_feed_vars

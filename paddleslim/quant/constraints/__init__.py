@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .constraint import FusionConstraint, Constraint
+from .constraint import Constraint, FusionConstraint
 from .conv_bn_constraints import FreezedConvBNConstraint
 
 __all__ = ["Constraint", "FusionConstraint", "FreezedConvBNConstraint"]

@@ -13,23 +13,27 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import time
-import os
-import pip
-import platform
 import logging
+import os
 import pickle
+import platform
 import shutil
-import subprocess
-import warnings
-import urllib.request as request
 import ssl
+import subprocess
+import time
+import urllib.request as request
+import warnings
+
 import paddle
-from .parse_ops import get_key_from_op
-from .extract_features import get_data_from_tables, get_features_from_paramkey
-from ._utils import opt_model, load_predictor, nearest_interpolate, _get_download
+import pip
+
 from ..common import get_logger
 from ..core import GraphWrapper
+from ._utils import (_get_download, load_predictor, nearest_interpolate,
+                     opt_model)
+from .extract_features import get_data_from_tables, get_features_from_paramkey
+from .parse_ops import get_key_from_op
+
 __all__ = ["LatencyPredictor", "TableLatencyPredictor"]
 
 _logger = get_logger(__name__, level=logging.INFO)

@@ -12,14 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import paddle
-import numpy as np
 import math
+
+import numpy as np
+import paddle
 from paddle.framework import ParamAttr
 from paddle.nn import Layer
 from paddle.nn.initializer import Constant
-from paddle.utils import unique_name
 from paddle.quantization.factory import QuanterFactory
+from paddle.utils import unique_name
+
 from .base_fake_quanter import BaseFakeQuanterLayer
 from .lsq_func import LsqFunc, LsqPlusActFunc, round
 

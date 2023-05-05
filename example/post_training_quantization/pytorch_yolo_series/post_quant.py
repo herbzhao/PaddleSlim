@@ -12,14 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
 import os
 import sys
+
 import numpy as np
-import argparse
 import paddle
+from dataset import COCOTrainDataset
 from paddleslim.common import load_config, load_onnx_model
 from paddleslim.quant import quant_post_static
-from dataset import COCOTrainDataset
 
 
 def argsparser():

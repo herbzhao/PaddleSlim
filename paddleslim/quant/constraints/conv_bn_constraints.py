@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .constraint import FusionConstraint
 from ..nn import Conv2DBatchNormWrapper, QuantedConv2DBatchNorm
+from .constraint import FusionConstraint
 
 FUSED_LAYER = Conv2DBatchNormWrapper
 QAT_FUSED_LAYER = QuantedConv2DBatchNorm

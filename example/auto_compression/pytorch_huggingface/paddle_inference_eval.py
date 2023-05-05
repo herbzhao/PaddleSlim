@@ -13,18 +13,18 @@
 # limitations under the License.
 
 import argparse
-import os
-import time
-import sys
-from functools import partial
 import distutils.util
-import numpy as np
+import os
+import sys
+import time
+from functools import partial
 
+import numpy as np
 import paddle
 from paddle import inference
-from paddle.metric import Metric, Accuracy, Precision, Recall
+from paddle.metric import Accuracy, Metric, Precision, Recall
+from paddlenlp.data import Pad, Stack, Tuple
 from paddlenlp.datasets import load_dataset
-from paddlenlp.data import Stack, Tuple, Pad
 from paddlenlp.metrics import AccuracyAndF1, Mcc, PearsonAndSpearman
 from paddlenlp.transformers import BertForSequenceClassification, BertTokenizer
 

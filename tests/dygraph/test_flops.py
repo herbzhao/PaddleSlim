@@ -1,6 +1,8 @@
 import sys
+
 sys.path.append("../../")
 import unittest
+
 import numpy as np
 import paddle
 from paddleslim import flops

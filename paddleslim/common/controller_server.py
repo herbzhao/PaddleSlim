@@ -12,13 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import logging
+import os
 import socket
 import time
-from .log_helper import get_logger
 from threading import Thread
+
 from .lock import lock, unlock
+from .log_helper import get_logger
 
 __all__ = ['ControllerServer']
 

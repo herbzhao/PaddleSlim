@@ -1,14 +1,16 @@
-import os
-import sys
 import csv
 import logging
-import numpy as np
+import os
+import sys
+
 import matplotlib.pyplot as plt
-from matplotlib.backends.backend_pdf import PdfPages
-from ..common import get_logger
+import numpy as np
 import paddle
 import paddle.nn.functional as F
+from matplotlib.backends.backend_pdf import PdfPages
 from paddle.static.quantization.utils import load_variable_data
+
+from ..common import get_logger
 
 _logger = get_logger(__name__, level=logging.INFO)
 

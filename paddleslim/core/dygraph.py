@@ -1,8 +1,10 @@
-import os
-import paddle
 import collections
 import logging
+import os
+
 import numpy as np
+import paddle
+
 from ..common import get_logger
 
 __all__ = ["dygraph2program"]

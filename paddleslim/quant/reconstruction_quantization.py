@@ -18,12 +18,11 @@ import time
 
 import numpy as np
 import paddle
-from paddle.static.quantization import utils
-from paddle.static.quantization import PostTrainingQuantization
+from paddle.static.quantization import PostTrainingQuantization, utils
 
-from ..dist import merge
-from ..core.graph_wrapper import GraphWrapper
 from ..common import get_logger
+from ..core.graph_wrapper import GraphWrapper
+from ..dist import merge
 
 __all__ = [
     'ReconstructionQuantization',

@@ -12,12 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from . import rep
-from . import config
-from . import reper
-
-from .rep import Reparameter
+from . import config, rep, reper
 from .config import *
+from .rep import Reparameter
 from .reper import *
 
 __all__ = []

@@ -12,17 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
 import numpy as np
 import paddle
-from paddle.nn.initializer import Constant, KaimingUniform
-from paddle.nn import Conv2D
-from genotypes import PRIMITIVES
-from genotypes import Genotype
+from genotypes import PRIMITIVES, Genotype
 from operations import *
+from paddle.nn import Conv2D
+from paddle.nn.initializer import Constant, KaimingUniform
 
 
 class ConvBN(paddle.nn.Layer):

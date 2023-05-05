@@ -1,10 +1,13 @@
 import os
 import time
+
 import numpy as np
 import paddle
-from ...prune import Pruner
-from ...core import GraphWrapper
+
 from ...common.load_model import load_inference_model
+from ...core import GraphWrapper
+from ...prune import Pruner
+
 __all__ = ["get_sparse_model", "get_prune_model"]
 
 

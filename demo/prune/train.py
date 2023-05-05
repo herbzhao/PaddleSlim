@@ -1,21 +1,24 @@
-import os
-import sys
-import logging
-import paddle
 import argparse
 import functools
+import logging
 import math
+import os
 import random
+import sys
 import time
+
 import numpy as np
+import paddle
+
 sys.path[0] = os.path.join(os.path.dirname("__file__"), os.path.pardir)
-from paddleslim.prune import Pruner, save_model
-from paddleslim.common import get_logger
-from paddleslim.analysis import flops
-import models
-from utility import add_arguments, print_arguments
 import paddle.vision.transforms as T
 from paddle.distributed import fleet
+from paddleslim.analysis import flops
+from paddleslim.common import get_logger
+from paddleslim.prune import Pruner, save_model
+from utility import add_arguments, print_arguments
+
+import models
 
 _logger = get_logger(__name__, level=logging.INFO)
 

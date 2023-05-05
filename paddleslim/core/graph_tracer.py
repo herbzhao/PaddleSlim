@@ -15,11 +15,12 @@
 
 import sys
 import types
-import paddle
 
+import paddle
 from paddleslim.core import GraphWrapper
-from .graph import Graph, Node
 from paddleslim.core.dygraph import dygraph2program
+
+from .graph import Graph, Node
 
 __all__ = ["GraphTracer"]
 

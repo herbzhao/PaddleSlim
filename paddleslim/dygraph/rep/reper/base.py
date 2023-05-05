@@ -14,8 +14,8 @@
 
 import paddle.nn as nn
 from paddle import ParamAttr
-from paddle.regularizer import L2Decay
 from paddle.nn.initializer import KaimingNormal
+from paddle.regularizer import L2Decay
 
 
 class BaseConv2DReper(nn.Layer):

@@ -1,5 +1,7 @@
 import argparse
+
 import paddle
+
 from ..utility import add_arguments, print_arguments
 
 parser = argparse.ArgumentParser(description=__doc__)

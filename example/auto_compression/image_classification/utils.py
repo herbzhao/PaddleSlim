@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import argparse
 import base64
+import os
 import shutil
+
 import cv2
 import numpy as np
 

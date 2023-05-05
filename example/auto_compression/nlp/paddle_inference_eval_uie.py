@@ -13,21 +13,22 @@
 # limitations under the License.
 
 import argparse
-import os
-import time
-import json
-import sys
-from functools import partial
 import distutils.util
-import numpy as np
+import json
+import os
+import sys
+import time
+from functools import partial
 
+import numpy as np
 import paddle
 from paddle import inference
-from paddle.metric import Metric, Accuracy, Precision, Recall
-from paddlenlp.transformers import AutoModelForTokenClassification, AutoTokenizer
+from paddle.metric import Accuracy, Metric, Precision, Recall
+from paddlenlp.data import Dict, Pad, Stack, Tuple
 from paddlenlp.datasets import load_dataset
-from paddlenlp.data import Stack, Tuple, Pad, Dict
 from paddlenlp.metrics import SpanEvaluator
+from paddlenlp.transformers import (AutoModelForTokenClassification,
+                                    AutoTokenizer)
 
 
 def parse_args():

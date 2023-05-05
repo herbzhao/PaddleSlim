@@ -1,11 +1,12 @@
-import os
-import math
-import random
 import functools
+import math
+import os
+import random
+
 import numpy as np
 import paddle
-from PIL import Image, ImageEnhance
 from paddle.io import Dataset
+from PIL import Image, ImageEnhance
 
 random.seed(0)
 np.random.seed(0)

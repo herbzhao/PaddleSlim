@@ -12,26 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import division
-from __future__ import print_function
+from __future__ import division, print_function
 
 import argparse
 import contextlib
-import os
-import time
 import math
+import os
 import random
-import numpy as np
-from PIL import Image
+import sys
+import time
 
+import numpy as np
 import paddle
+import paddle.nn as nn
+import paddle.vision.models as models
 from paddle.io import Dataset
 from paddle.vision.transforms import transforms
-import paddle.vision.models as models
-import paddle.nn as nn
 from paddleslim import PTQ
+from PIL import Image
 
-import sys
 sys.path.append(os.path.dirname("__file__"))
 sys.path.append(
     os.path.join(os.path.dirname("__file__"), os.path.pardir, os.path.pardir))

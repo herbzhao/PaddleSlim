@@ -12,20 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-import os
-import sys
 import argparse
 import functools
 import logging
+import os
+import sys
+
+import cifar100_reader as reader
 import paddle
+from paddle.vision.models import MobileNetV1, resnet34
 from paddleslim.common import AvgrageMeter, get_logger
 from paddleslim.dist import DML
-from paddle.vision.models import MobileNetV1, resnet34
-import cifar100_reader as reader
+
 sys.path[0] = os.path.join(os.path.dirname("__file__"), os.path.pardir)
 from utility import add_arguments, print_arguments
 

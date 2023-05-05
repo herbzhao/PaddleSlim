@@ -12,27 +12,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
 import os
-import unittest
-import paddle
+import sys
 import tempfile
+import unittest
+
 import numpy as np
+import paddle
+
 sys.path.append("../../")
 
+import logging
+
+from paddle.nn.quant.format import LinearDequanter, LinearQuanter
+from paddle.quantization import QAT, QuantConfig
+from paddle.quantization.quanters import FakeQuanterWithAbsMaxObserver
+from paddle.quantization.quanters.abs_max import \
+    FakeQuanterWithAbsMaxObserverLayer
 from paddle.vision.models import resnet18
-from paddle.quantization import QuantConfig
-from paddle.quantization import QAT
-from paddleslim.quant.quanters import ActLSQplusQuanter, WeightLSQplusQuanter, PACTQuanter
+from paddleslim.common import get_logger
+from paddleslim.quant.quanters import (ActLSQplusQuanter, PACTQuanter,
+                                       WeightLSQplusQuanter)
 from paddleslim.quant.quanters.lsq_act import ActLSQplusQuanterLayer
 from paddleslim.quant.quanters.lsq_weight import WeightLSQplusQuanterLayer
 from paddleslim.quant.quanters.pact import PACTQuanterLayer
-from paddle.quantization.quanters import FakeQuanterWithAbsMaxObserver
-from paddle.quantization.quanters.abs_max import FakeQuanterWithAbsMaxObserverLayer
-from paddle.nn.quant.format import LinearDequanter, LinearQuanter
 
-import logging
-from paddleslim.common import get_logger
 _logger = get_logger(__name__, level=logging.INFO)
 
 

@@ -13,7 +13,9 @@
 # limitations under the License.
 
 import logging
+
 from ..log_helper import get_logger
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 from .lstm import *

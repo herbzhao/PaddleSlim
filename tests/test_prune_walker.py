@@ -11,18 +11,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import sys
 import os
+import sys
+
 sys.path.append("../")
+import random
 import unittest
+
 import numpy as np
 import paddle
-from paddleslim.prune import Pruner
-from static_case import StaticCase
 from layers import conv_bn_layer
-import random
 from paddleslim.core import GraphWrapper
+from paddleslim.prune import Pruner
 from paddleslim.prune.prune_worker import *
+from static_case import StaticCase
 
 
 class TestPrune(StaticCase):

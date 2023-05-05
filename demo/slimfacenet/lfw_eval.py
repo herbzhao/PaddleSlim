@@ -12,13 +12,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import os
 import argparse
+import os
 import time
-import scipy.io
-import numpy as np
 
+import numpy as np
 import paddle
+import scipy.io
 from dataloader.casia import CASIA_Face
 from dataloader.lfw import LFW
 from paddleslim import models

@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
 from layers import conv_bn_layer
 from paddleslim.prune import StaticPruningCollections

@@ -14,16 +14,20 @@
 
 import os
 import types
-import paddle
-import numpy as np
 from collections import defaultdict
+
 import matplotlib
+import numpy as np
+import paddle
+
 matplotlib.use('Agg')
+import logging
+
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
-import logging
 from ..common import get_logger
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 

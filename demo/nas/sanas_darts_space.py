@@ -1,20 +1,20 @@
 import os
 import sys
+
 sys.path.append('..')
-import numpy as np
-import argparse
-import ast
-import time
 import argparse
 import ast
 import logging
-import paddle
-import paddle.nn.functional as F
-import paddle.nn as nn
-import paddle.static as static
-from paddleslim.nas import SANAS
-from paddleslim.common import get_logger
+import time
+
 import darts_cifar10_reader as reader
+import numpy as np
+import paddle
+import paddle.nn as nn
+import paddle.nn.functional as F
+import paddle.static as static
+from paddleslim.common import get_logger
+from paddleslim.nas import SANAS
 
 _logger = get_logger(__name__, level=logging.INFO)
 

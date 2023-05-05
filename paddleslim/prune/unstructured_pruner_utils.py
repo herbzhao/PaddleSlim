@@ -1,5 +1,6 @@
-import numpy as np
 import copy
+
+import numpy as np
 
 __all__ = ["BLOCK_SPARSE_ACCURATE_THRESHOLD", "cal_mxn_avg_matrix"]
 

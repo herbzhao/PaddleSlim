@@ -1,9 +1,9 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
+
+from collections import namedtuple
+
 import paddle
 from paddle.nn.initializer import KaimingUniform
-from collections import namedtuple
 
 BLOCK_TYPE_MCRELU = 'BLOCK_TYPE_MCRELU'
 BLOCK_TYPE_INCEP = 'BLOCK_TYPE_INCEP'

@@ -13,17 +13,19 @@
 # limitations under the License.
 
 import logging
-import numpy as np
+import numbers
 from collections import namedtuple
+
+import numpy as np
 import paddle
-from .utils.utils import get_paddle_version, remove_model_fn, build_input
-from .layers import SuperConv2D, SuperLinear
-from .layers_base import BaseBlock, Block
-from .utils.utils import search_idx
+
 from ...common import get_logger
 from ...core import GraphWrapper, dygraph2program
-from .get_sub_model import check_search_space, broadcast_search_space
-import numbers
+from .get_sub_model import broadcast_search_space, check_search_space
+from .layers import SuperConv2D, SuperLinear
+from .layers_base import BaseBlock, Block
+from .utils.utils import (build_input, get_paddle_version, remove_model_fn,
+                          search_idx)
 
 _logger = get_logger(__name__, level=logging.INFO)
 

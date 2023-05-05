@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .conv_bn import QuantedConv2DBatchNorm, Conv2DBatchNormWrapper
+from .conv_bn import Conv2DBatchNormWrapper, QuantedConv2DBatchNorm
 
 __all__ = ["QuantedConv2DBatchNorm", "Conv2DBatchNormWrapper"]

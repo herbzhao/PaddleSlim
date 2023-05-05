@@ -12,27 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../../")
 
 import copy
-
 import unittest
-import paddle
-
-# basic loss
-from paddleslim.dygraph.dist.losses import CombinedLoss
-
-# basic loss
-from paddleslim.dygraph.dist.losses.basic_loss import DistanceLoss
-from paddleslim.dygraph.dist.losses.basic_loss import CELoss
-from paddleslim.dygraph.dist.losses.basic_loss import DMLLoss
-from paddleslim.dygraph.dist.losses.basic_loss import RkdDistance
-from paddleslim.dygraph.dist.losses.basic_loss import RKdAngle
-
-# distillation loss
-from paddleslim.dygraph.dist.losses import DistillationLoss
 
 import numpy as np
+import paddle
+# distillation loss
+# basic loss
+from paddleslim.dygraph.dist.losses import CombinedLoss, DistillationLoss
+# basic loss
+from paddleslim.dygraph.dist.losses.basic_loss import (CELoss, DistanceLoss,
+                                                       DMLLoss, RKdAngle,
+                                                       RkdDistance)
 
 
 class TestDistanceLoss(unittest.TestCase):

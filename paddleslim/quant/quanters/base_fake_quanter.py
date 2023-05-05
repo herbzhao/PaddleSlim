@@ -13,8 +13,9 @@
 # limitations under the License.
 
 import abc
-import paddle
+
 import numpy as np
+import paddle
 from paddle.quantization.base_quanter import BaseQuanter
 
 

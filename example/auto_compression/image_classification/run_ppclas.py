@@ -12,23 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import sys
 import argparse
 import functools
-from functools import partial
 import math
-from tqdm import tqdm
+import os
+import sys
+from functools import partial
 
 import numpy as np
 import paddle
 import paddle.nn as nn
 from paddle.io import DataLoader
-from paddleslim.common import load_config as load_slim_config
 from paddleslim.auto_compression import AutoCompression
+from paddleslim.common import load_config as load_slim_config
 from ppcls.data import build_dataloader
 from ppcls.utils import config
 from ppcls.utils.logger import init_logger
+from tqdm import tqdm
 
 
 def argsparser():

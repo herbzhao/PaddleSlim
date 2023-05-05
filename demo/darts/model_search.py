@@ -12,16 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
 import paddle
-from paddle.nn.initializer import Normal, KaimingUniform, Constant
-from paddle.nn import Conv2D, Pool2D, BatchNorm, Linear
+import paddleslim
 from genotypes import PRIMITIVES
 from operations import *
-import paddleslim
+from paddle.nn import BatchNorm, Conv2D, Linear, Pool2D
+from paddle.nn.initializer import Constant, KaimingUniform, Normal
 
 
 def channel_shuffle(x, groups):

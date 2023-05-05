@@ -1,11 +1,13 @@
 import os
 import sys
 import unittest
+
 sys.path.append("../../")
 import numpy as np
 import paddle
 from paddle.io import Dataset
 from paddleslim.auto_compression import AutoCompression
+
 paddle.enable_static()
 
 

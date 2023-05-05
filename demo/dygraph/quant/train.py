@@ -12,33 +12,33 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-import os
-import sys
-import logging
-import paddle
 import argparse
 import functools
+import logging
 import math
-import time
+import os
 import random
+import sys
+import time
+
 import numpy as np
+import paddle
+import paddle.vision.transforms as T
 from paddle.distributed import ParallelEnv
 from paddle.static import load_program_state
 from paddle.vision.models import mobilenet_v1
-import paddle.vision.transforms as T
 from paddleslim.common import get_logger
 from paddleslim.dygraph.quant import QAT
 
 sys.path.append(os.path.join(os.path.dirname("__file__")))
 from optimizer import create_optimizer
+
 sys.path.append(
     os.path.join(os.path.dirname("__file__"), os.path.pardir, os.path.pardir))
-from utility import add_arguments, print_arguments
 from models.dygraph.mobilenet_v3 import MobileNetV3_large_x1_0
+from utility import add_arguments, print_arguments
 
 _logger = get_logger(__name__, level=logging.INFO)
 

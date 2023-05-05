@@ -12,20 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import time
+import argparse
 import os
 import sys
-import argparse
+import time
+
 import cv2
 import numpy as np
-from tqdm import tqdm
-import pkg_resources as pkg
-
 import paddle
-from paddle.inference import Config
-from paddle.inference import create_predictor
+import pkg_resources as pkg
 from dataset import COCOValDataset
+from paddle.inference import Config, create_predictor
 from post_process import YOLOPostProcess, coco_metric
+from tqdm import tqdm
 
 
 def argsparser():
@@ -197,9 +196,9 @@ def get_current_memory_mb():
     It is used to Obtain the memory usage of the CPU and GPU during the running of the program.
     And this function Current program is time-consuming.
     """
-    import pynvml
-    import psutil
     import GPUtil
+    import psutil
+    import pynvml
 
     gpu_id = int(os.environ.get("CUDA_VISIBLE_DEVICES", 0))
 

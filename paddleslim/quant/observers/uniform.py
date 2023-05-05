@@ -14,6 +14,7 @@
 
 import abc
 from typing import Tuple
+
 import numpy as np
 from paddle.quantization.base_observer import BaseObserver
 

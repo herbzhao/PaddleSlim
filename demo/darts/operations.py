@@ -13,10 +13,8 @@
 # limitations under the License.
 
 import paddle
-from paddle.nn import Conv2D
-from paddle.nn import BatchNorm
+from paddle.nn import BatchNorm, Conv2D
 from paddle.nn.initializer import Constant, KaimingUniform
-
 
 OPS = {
     'none':

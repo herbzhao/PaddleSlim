@@ -1,9 +1,11 @@
+import logging
 import os
 import pickle
+
 import numpy as np
-import logging
-from .pruning_plan import PruningPlan
 from paddleslim.common import get_logger
+
+from .pruning_plan import PruningPlan
 
 __all__ = ["Pruner"]
 

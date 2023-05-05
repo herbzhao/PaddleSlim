@@ -1,22 +1,22 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-import os
-import sys
-import math
-import logging
-import paddle
 import argparse
 import functools
-import numpy as np
-sys.path[0] = os.path.join(os.path.dirname("__file__"), os.path.pardir)
-import models
-from utility import add_arguments, print_arguments, _download, _decompress
-from paddleslim.dist import merge, l2, soft_label
+import logging
+import math
+import os
+import sys
 
+import numpy as np
+import paddle
+
+sys.path[0] = os.path.join(os.path.dirname("__file__"), os.path.pardir)
 from paddle.distributed import fleet
 from paddle.distributed.fleet import DistributedStrategy
+from paddleslim.dist import l2, merge, soft_label
+from utility import _decompress, _download, add_arguments, print_arguments
+
+import models
 
 logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s')
 _logger = logging.getLogger(__name__)

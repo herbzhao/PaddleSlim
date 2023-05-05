@@ -17,16 +17,11 @@ import logging
 
 import paddle
 import paddle.nn as nn
+from paddle.quantization import (SUPPORT_ACT_QUANTIZERS, SUPPORT_WT_QUANTIZERS,
+                                 AbsmaxQuantizer, HistQuantizer, ImperativePTQ,
+                                 KLQuantizer, PerChannelAbsmaxQuantizer,
+                                 PTQConfig)
 
-from paddle.quantization import (
-    PTQConfig,
-    ImperativePTQ,
-    AbsmaxQuantizer,
-    HistQuantizer,
-    KLQuantizer,
-    PerChannelAbsmaxQuantizer,
-    SUPPORT_ACT_QUANTIZERS,
-    SUPPORT_WT_QUANTIZERS, )
 from ...common import get_logger
 
 _logger = get_logger(__name__, level=logging.INFO)

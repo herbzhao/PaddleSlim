@@ -12,17 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import logging
 import os
-import numpy as np
 import pickle
-import paddle
-import paddleslim
+import shutil
 import subprocess
 import time
+
+import numpy as np
+import paddle
+import paddleslim
 import requests
-import shutil
-import logging
+
 from ..common import get_logger
+
 _logger = get_logger(__name__, level=logging.INFO)
 __all__ = [
     "save_cls_model", "save_det_model", "nearest_interpolate", "opt_model",

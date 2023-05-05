@@ -11,20 +11,19 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+import argparse
 import os
 import shutil
 import subprocess
-import argparse
 import time
-import scipy.io
-import numpy as np
 
+import numpy as np
 import paddle
 import paddle.fluid as fluid
-
+import scipy.io
 from dataloader.casia import CASIA_Face
 from dataloader.lfw import LFW
-from lfw_eval import parse_filelist, evaluation_10_fold
+from lfw_eval import evaluation_10_fold, parse_filelist
 from paddleslim import models
 from paddleslim.quant import quant_post_static
 

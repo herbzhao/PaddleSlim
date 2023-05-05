@@ -16,6 +16,7 @@ import copy
 import logging
 
 import paddle
+
 from ...common import get_logger
 
 _logger = get_logger(__name__, level=logging.INFO)

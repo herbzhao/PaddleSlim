@@ -15,7 +15,8 @@
 from typing import Dict, Union
 
 import paddle.nn as nn
-from .reper import DiverseBranchBlock, ACBlock, RepVGGBlock, SlimRepBlock
+
+from .reper import ACBlock, DiverseBranchBlock, RepVGGBlock, SlimRepBlock
 
 SUPPORT_REP_TYPE_LAYERS = [nn.Conv2D, nn.Linear]
 

@@ -1,17 +1,12 @@
-from . import var_group
-from .var_group import *
-from . import l1norm_pruner
-from .l1norm_pruner import *
-from . import pruner
-from .pruner import *
-from . import filter_pruner
+from . import (filter_pruner, fpgm_pruner, l1norm_pruner, l2norm_pruner,
+               pruner, unstructured_pruner, var_group)
 from .filter_pruner import *
-from . import l2norm_pruner
-from .l2norm_pruner import *
-from . import fpgm_pruner
 from .fpgm_pruner import *
-from . import unstructured_pruner
+from .l1norm_pruner import *
+from .l2norm_pruner import *
+from .pruner import *
 from .unstructured_pruner import *
+from .var_group import *
 
 __all__ = []
 

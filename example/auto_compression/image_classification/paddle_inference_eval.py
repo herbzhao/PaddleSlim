@@ -12,18 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import time
-import sys
 import argparse
-import numpy as np
-import cv2
-import yaml
+import os
+import sys
+import time
 
+import cv2
+import numpy as np
 import paddle
+import yaml
+from imagenet_reader import ImageNetDataset
 from paddle.inference import create_predictor
 from paddle.io import DataLoader
-from imagenet_reader import ImageNetDataset
 
 
 def argsparser():

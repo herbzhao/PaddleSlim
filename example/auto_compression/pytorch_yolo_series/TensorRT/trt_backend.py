@@ -12,13 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import tensorrt as trt
-import pycuda.driver as cuda
-import pycuda.autoinit
-import sys
-import os
 import copy
+import os
+import sys
+
 import numpy as np
+import pycuda.autoinit
+import pycuda.driver as cuda
+import tensorrt as trt
 
 EXPLICIT_BATCH = 1 << (int)(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH)
 EXPLICIT_PRECISION = 1 << (

@@ -13,6 +13,7 @@
 # limitations under the License.
 
 from __future__ import absolute_import
+
 from .predict import predict_compressed_model
 
 __all__ = ["predict_compressed_model"]

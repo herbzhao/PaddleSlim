@@ -1,14 +1,17 @@
 import os
 import sys
 import unittest
+
 import numpy as np
+
 sys.path.append("../../")
 
 import paddle
-from PIL import Image
 from paddle.vision.datasets import DatasetFolder
 from paddle.vision.transforms import transforms
 from paddleslim.quant.analysis import Analysis
+from PIL import Image
+
 paddle.enable_static()
 
 

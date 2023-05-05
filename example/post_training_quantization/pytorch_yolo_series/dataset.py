@@ -1,8 +1,9 @@
-from pycocotools.coco import COCO
-import cv2
 import os
+
+import cv2
 import numpy as np
 import paddle
+from pycocotools.coco import COCO
 
 
 class COCOValDataset(paddle.io.Dataset):

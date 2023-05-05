@@ -12,21 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import division
-from __future__ import print_function
+from __future__ import division, print_function
 
 import argparse
 import contextlib
-import os
-
-import time
 import math
+import os
+import time
+
 import numpy as np
-
 import paddle
-import paddle.vision.models as models
 import paddle.nn as nn
-
+import paddle.vision.models as models
 from imagenet_dataset import ImageNetDataset
 from paddleslim import PTQ
 

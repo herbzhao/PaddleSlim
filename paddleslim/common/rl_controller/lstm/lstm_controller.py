@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import math
 import logging
+import math
+
 import numpy as np
 import paddle
 from paddle.nn import LSTMCell
+
 from ...controller import RLBaseController
 from ...log_helper import get_logger
 from ..utils import RLCONTROLLER

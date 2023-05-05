@@ -1,11 +1,13 @@
 import os
 import sys
+
 sys.path.append("../../")
-import numpy as np
 import unittest
+
+import numpy as np
 import paddle
-from paddleslim.common import load_config
 from paddleslim.auto_compression.compressor import AutoCompression
+from paddleslim.common import load_config
 
 
 class RandomDataset(paddle.io.Dataset):

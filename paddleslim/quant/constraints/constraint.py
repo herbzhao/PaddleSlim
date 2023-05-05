@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import paddle
 import abc
 from typing import List
+
+import paddle
 from paddleslim.core.graph import Graph
 from paddleslim.quant.config import SlimQuantConfig
 

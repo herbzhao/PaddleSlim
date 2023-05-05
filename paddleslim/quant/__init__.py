@@ -12,19 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import platform
 import logging
+import platform
 
 import paddle
+
 from ..common import get_logger
 
 _logger = get_logger(__name__, level=logging.INFO)
 min_paddle_version = '2.3.0'
 try:
     paddle.utils.require_version(min_paddle_version)
-    from .quanter import quant_aware, convert, quant_post_static, quant_post_dynamic
-    from .quanter import quant_post, quant_post_only_weight
-    from .quant_aware_with_infermodel import quant_aware_with_infermodel, export_quant_infermodel
+    from .quant_aware_with_infermodel import (export_quant_infermodel,
+                                              quant_aware_with_infermodel)
+    from .quanter import (convert, quant_aware, quant_post, quant_post_dynamic,
+                          quant_post_only_weight, quant_post_static)
     from .reconstruction_quantization import quant_recon_static
     if platform.system().lower() == 'linux':
         from .post_quant_hpo import quant_post_hpo
@@ -38,7 +40,7 @@ except Exception as e:
         "If you want to use training-aware and post-training quantization, "
         "please use Paddle >= {} or develop version".format(min_paddle_version))
 
-from .quant_embedding import quant_embedding
 from . import nn
-from .qat import SlimQAT
 from .config import SlimQuantConfig
+from .qat import SlimQAT
+from .quant_embedding import quant_embedding

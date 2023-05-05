@@ -1,20 +1,24 @@
-import os
-import sys
-import logging
-import paddle
 import argparse
 import functools
-import time
+import logging
+import os
 import random
+import sys
+import time
+
 import numpy as np
-from paddleslim.prune.unstructured_pruner import UnstructuredPruner, GMPUnstructuredPruner
+import paddle
 from paddleslim.common import get_logger
+from paddleslim.prune.unstructured_pruner import (GMPUnstructuredPruner,
+                                                  UnstructuredPruner)
+
 sys.path.append(os.path.join(os.path.dirname("__file__"), os.path.pardir))
-import models
-from utility import add_arguments, print_arguments
 import paddle.vision.transforms as T
 from paddle.distributed import fleet
 from paddle.distributed.fleet import DistributedStrategy
+from utility import add_arguments, print_arguments
+
+import models
 
 _logger = get_logger(__name__, level=logging.INFO)
 

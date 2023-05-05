@@ -13,23 +13,24 @@
 # limitations under the License.
 
 import warnings
+
 warnings.filterwarnings("ignore")
+import argparse
 import os
 import sys
-import numpy as np
-import argparse
-from tqdm import tqdm
-import pkg_resources as pkg
 import time
-import cv2
 
-import paddle
+import cv2
+import numpy as np
 import onnx
+import paddle
+import pkg_resources as pkg
+from tqdm import tqdm
 
 sys.path.append("../")
-from post_process import YOLOPostProcess, coco_metric
-from dataset import COCOValDataset
 import trt_backend
+from dataset import COCOValDataset
+from post_process import YOLOPostProcess, coco_metric
 
 
 def argsparser():
@@ -184,9 +185,9 @@ def get_current_memory_mb():
     except:
         from pip._internal import main
         main(['install', 'GPUtil'])
-    import pynvml
-    import psutil
     import GPUtil
+    import psutil
+    import pynvml
     gpu_id = int(os.environ.get('CUDA_VISIBLE_DEVICES', 0))
 
     pid = os.getpid()

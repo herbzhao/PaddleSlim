@@ -1,19 +1,21 @@
 import sys
+
 sys.path.append('..')
-import numpy as np
 import argparse
 import ast
 import logging
 import time
+
+import imagenet_reader
+import numpy as np
 import paddle
 import paddle.nn as nn
 import paddle.nn.functional as F
-import paddle.vision.transforms as T
 import paddle.static as static
+import paddle.vision.transforms as T
 from paddleslim.analysis import flops
-from paddleslim.nas import SANAS
 from paddleslim.common import get_logger
-import imagenet_reader
+from paddleslim.nas import SANAS
 
 _logger = get_logger(__name__, level=logging.INFO)
 

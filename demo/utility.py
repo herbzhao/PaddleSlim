@@ -13,20 +13,20 @@
 #See the License for the specific language governing permissions and
 #limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
+
 import distutils.util
-import os
-import numpy as np
-import six
-import requests
-import shutil
-import tqdm
 import hashlib
+import logging
+import os
+import shutil
 import tarfile
 import zipfile
-import logging
+
+import numpy as np
+import requests
+import six
+import tqdm
 from paddle.static import Program
 
 logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s')

@@ -1,11 +1,13 @@
 import sys
+
 sys.path.append("../")
 import unittest
-from static_case import StaticCase
-import paddle
-from paddleslim.prune import UnstructuredPruner, GMPUnstructuredPruner
-from layers import conv_bn_layer
+
 import numpy as np
+import paddle
+from layers import conv_bn_layer
+from paddleslim.prune import GMPUnstructuredPruner, UnstructuredPruner
+from static_case import StaticCase
 
 
 class TestUnstructuredPruner(StaticCase):

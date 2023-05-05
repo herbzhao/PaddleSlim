@@ -11,19 +11,23 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import sys
 import os
+import sys
+
 sys.path.append("../")
-import unittest
 import tempfile
+import unittest
+
 import paddle
 from paddleslim.quant import quant_post_static
 from static_case import StaticCase
+
 sys.path.append("../demo")
-from models import *
-from layers import conv_bn_layer
 import numpy as np
+from layers import conv_bn_layer
 from paddleslim.quant import quant_recon_static
+
+from models import *
 
 
 class ReconPTQ(unittest.TestCase):

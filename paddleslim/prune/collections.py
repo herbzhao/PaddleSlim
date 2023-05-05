@@ -14,8 +14,9 @@
 # limitations under the License.
 import copy
 import logging
-from ..core import GraphWrapper, VarWrapper
+
 from ..common import get_logger
+from ..core import GraphWrapper, VarWrapper
 from .prune_worker import PRUNE_WORKER, UnsupportOpError
 
 __all__ = [

@@ -13,19 +13,20 @@
 # limitations under the License.
 
 import argparse
-import time
 import os
 import sys
+import time
+
 import cv2
 import numpy as np
 import paddle
 import paddleseg.transforms as T
-from paddleseg.cvlibs import Config as PaddleSegDataConfig
-from paddleseg.core.infer import reverse_transform
-from paddleseg.utils.visualize import get_pseudo_color_map
-from paddleseg.utils import metrics
-from paddle.inference import create_predictor, PrecisionType
 from paddle.inference import Config as PredictConfig
+from paddle.inference import PrecisionType, create_predictor
+from paddleseg.core.infer import reverse_transform
+from paddleseg.cvlibs import Config as PaddleSegDataConfig
+from paddleseg.utils import metrics
+from paddleseg.utils.visualize import get_pseudo_color_map
 
 
 def _transforms(dataset):

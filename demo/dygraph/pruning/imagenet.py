@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import math
+import os
 import random
-import numpy as np
-from PIL import Image
 
+import numpy as np
 from paddle.vision.datasets import DatasetFolder
 from paddle.vision.transforms import transforms
+from PIL import Image
 
 
 class ImageNetDataset(DatasetFolder):

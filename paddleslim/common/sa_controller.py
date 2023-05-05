@@ -13,13 +13,15 @@
 # limitations under the License.
 """The controller used to search hyperparameters or neural architecture"""
 
+import copy
+import json
+import logging
+import math
 import os
 import sys
-import copy
-import math
-import logging
+
 import numpy as np
-import json
+
 from .controller import EvolutionaryController
 from .log_helper import get_logger
 

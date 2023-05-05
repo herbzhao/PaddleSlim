@@ -1,8 +1,8 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-import paddle
+from __future__ import absolute_import, division, print_function
+
 import math
+
+import paddle
 
 __all__ = ["ResNet", "ResNet34", "ResNet50", "ResNet101", "ResNet152"]
 

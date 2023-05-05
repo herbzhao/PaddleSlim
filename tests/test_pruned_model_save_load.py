@@ -12,14 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
-import paddle
-from paddleslim.prune import Pruner, save_model, load_model
-from layers import conv_bn_layer
-from static_case import StaticCase
-import numpy as np
+
 import numpy
+import numpy as np
+import paddle
+from layers import conv_bn_layer
+from paddleslim.prune import Pruner, load_model, save_model
+from static_case import StaticCase
 
 
 class TestSaveAndLoad(StaticCase):

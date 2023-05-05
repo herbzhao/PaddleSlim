@@ -12,23 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import sys
 import argparse
-import pickle
 import functools
-from functools import partial
 import math
-from tqdm import tqdm
+import os
+import pickle
+import sys
+from functools import partial
 
 import numpy as np
 import paddle
 import paddle.nn as nn
-from paddle.io import DataLoader
 import paddleslim
 from imagenet_reader import ImageNetDataset
-from paddleslim.common import load_config as load_slim_config
+from paddle.io import DataLoader
 from paddleslim.auto_compression.analysis import analysis_prune
+from paddleslim.common import load_config as load_slim_config
+from tqdm import tqdm
 
 
 def argsparser():

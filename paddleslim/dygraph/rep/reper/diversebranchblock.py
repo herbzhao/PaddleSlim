@@ -15,7 +15,6 @@
 # This code is referenced from: https://github.com/DingXiaoH/DiverseBranchBlock/blob/main/diversebranchblock.py
 
 import numpy as np
-
 import paddle
 import paddle.nn as nn
 import paddle.nn.functional as F

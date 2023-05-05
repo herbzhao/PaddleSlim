@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*
-import os
-import random
-import re
-import six
 import argparse
 import io
 import math
+import os
+import random
+import re
+
+import six
+
 prog = re.compile("[^a-z ]", flags=0)
 
 

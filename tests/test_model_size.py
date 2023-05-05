@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
-from paddleslim.analysis import model_size
 from layers import conv_bn_layer
+from paddleslim.analysis import model_size
 from static_case import StaticCase
 
 

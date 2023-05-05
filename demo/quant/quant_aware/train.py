@@ -1,22 +1,25 @@
-import os
-import sys
-import logging
-import paddle
 import argparse
 import functools
+import logging
 import math
-import time
+import os
 import random
+import sys
+import time
+
 import numpy as np
+import paddle
+
 sys.path[0] = os.path.join(
     os.path.dirname("__file__"), os.path.pardir, os.path.pardir)
-from paddleslim.common import get_logger
-from paddleslim.analysis import flops
-from paddleslim.quant import quant_aware, convert
 import paddle.vision.transforms as T
-import models
 from paddle.distributed import fleet
+from paddleslim.analysis import flops
+from paddleslim.common import get_logger
+from paddleslim.quant import convert, quant_aware
 from utility import add_arguments, print_arguments
+
+import models
 
 quantization_model_save_dir = './quantization_models/'
 

@@ -12,15 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
-import os
 import logging
+import os
 import pickle
+import sys
+
 import numpy as np
 import paddle
-from ..core import GraphWrapper
-from ..common import get_logger
+
 from ..analysis import flops
+from ..common import get_logger
+from ..core import GraphWrapper
 from ..prune import Pruner
 
 _logger = get_logger(__name__, level=logging.INFO)

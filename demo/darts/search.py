@@ -12,19 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
+import argparse
+import ast
+import functools
 import os
 import sys
-import ast
-import argparse
-import functools
 
 import reader
 from model_search import Network
 from paddleslim.nas.darts import DARTSearch
+
 sys.path[0] = os.path.join(os.path.dirname("__file__"), os.path.pardir)
 from utility import add_arguments, print_arguments
 

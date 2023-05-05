@@ -12,19 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import hashlib
+import json
+import logging
 import os
 import socket
-import logging
-import numpy as np
-import json
-import hashlib
 import time
-import paddle
-from ..common.rl_controller.utils import RLCONTROLLER
-from ..common import get_logger
 
-from ..common import Server
-from ..common import Client
+import numpy as np
+import paddle
+
+from ..common import Client, Server, get_logger
+from ..common.rl_controller.utils import RLCONTROLLER
 from .search_space import SearchSpaceFactory
 
 _logger = get_logger(__name__, level=logging.INFO)

@@ -12,14 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
-import unittest
 import logging
+import unittest
+
 import numpy as np
 import paddle
-from static_case import StaticCase
-from paddleslim.dist import DML
 from paddleslim.common import get_logger
+from paddleslim.dist import DML
+from static_case import StaticCase
+
 logger = get_logger(__name__, level=logging.INFO)
 
 

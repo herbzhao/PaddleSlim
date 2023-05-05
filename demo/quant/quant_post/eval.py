@@ -12,13 +12,14 @@
 #See the License for the specific language governing permissions and
 #limitations under the License.
 
-import os
-import sys
-import numpy as np
 import argparse
 import functools
+import os
+import sys
 
+import numpy as np
 import paddle
+
 sys.path[0] = os.path.join(
     os.path.dirname("__file__"), os.path.pardir, os.path.pardir)
 sys.path[1] = os.path.join(os.path.dirname("__file__"), os.path.pardir)

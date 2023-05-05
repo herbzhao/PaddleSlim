@@ -12,9 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import logging
+import os
+
 import numpy as np
+
 from .log_helper import get_logger
 
 __all__ = ['cached_reader']

@@ -12,23 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import sys
-import numpy as np
 import argparse
+import functools
+import os
+import shutil
+import sys
+from functools import partial
+
+import numpy as np
 import paddle
 import paddle.nn as nn
-import functools
-from functools import partial
-import shutil
-from paddle.io import Dataset, BatchSampler, DataLoader
-from paddle.metric import Metric, Accuracy
-from paddlenlp.transformers import AutoModelForTokenClassification, AutoTokenizer
+from paddle.io import BatchSampler, DataLoader, Dataset
+from paddle.metric import Accuracy, Metric
+from paddlenlp.data import Pad, Stack, Tuple
 from paddlenlp.datasets import load_dataset
-from paddlenlp.data import Stack, Tuple, Pad
 from paddlenlp.metrics import AccuracyAndF1, Mcc, PearsonAndSpearman
-from paddleslim.common import load_config as load_slim_config
+from paddlenlp.transformers import (AutoModelForTokenClassification,
+                                    AutoTokenizer)
 from paddleslim.auto_compression.compressor import AutoCompression
+from paddleslim.common import load_config as load_slim_config
 
 
 def argsparser():

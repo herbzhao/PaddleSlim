@@ -12,15 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import numpy as np
 import logging
+import os
+
+import numpy as np
 import paddle
+from paddle.framework import in_dygraph_mode
 
 from ...common import get_logger
-from .utils.utils import compute_start_end, get_same_padding, convert_to_list
 from .layers_base import *
-from paddle.framework import in_dygraph_mode
+from .utils.utils import compute_start_end, convert_to_list, get_same_padding
 
 __all__ = [
     'SuperConv2D', 'SuperConv2DTranspose', 'SuperSeparableConv2D',

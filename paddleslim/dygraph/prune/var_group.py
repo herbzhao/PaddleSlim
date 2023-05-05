@@ -1,9 +1,10 @@
-import numpy as np
 import logging
+
+import numpy as np
 import paddle
+from paddleslim.common import get_logger
 from paddleslim.core import GraphWrapper, dygraph2program
 from paddleslim.prune import PruningCollections
-from paddleslim.common import get_logger
 
 __all__ = ["DygraphPruningCollections"]
 

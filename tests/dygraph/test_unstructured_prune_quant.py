@@ -1,8 +1,10 @@
 import sys
+
 sys.path.append("../../")
 import unittest
-import paddle
+
 import numpy as np
+import paddle
 from paddle.static import InputSpec as Input
 from paddleslim import UnstructuredPruner
 

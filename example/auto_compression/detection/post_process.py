@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import numpy as np
 import cv2
+import numpy as np
 
 
 def hard_nms(box_scores, iou_threshold, top_k=-1, candidate_size=200):

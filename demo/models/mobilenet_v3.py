@@ -1,6 +1,7 @@
+import math
+
 import paddle
 from paddle.nn.initializer import KaimingUniform
-import math
 
 __all__ = [
     'MobileNetV3', 'MobileNetV3_small_x0_25', 'MobileNetV3_small_x0_5',

@@ -13,8 +13,10 @@
 # limitations under the License.
 
 import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
 from paddleslim.nas.ofa.convert_super import Convert, supernet
 

@@ -1,11 +1,13 @@
 import sys
+
 sys.path.append("../../")
 import logging
-import numpy as np
 import unittest
+
+import numpy as np
 import paddle
-from paddleslim.dygraph.dist import Distill, config2yaml
 from paddleslim.common.log_helper import get_logger
+from paddleslim.dygraph.dist import Distill, config2yaml
 
 _logger = get_logger(
     __name__, logging.INFO, fmt='%(asctime)s-%(levelname)s: %(message)s')

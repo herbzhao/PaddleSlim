@@ -12,15 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Setup for pip package."""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
 import platform
 import subprocess
 
-from setuptools import find_packages
-from setuptools import setup
+from setuptools import find_packages, setup
 
 if 'develop' in subprocess.getoutput('git branch'):
     slim_version = '0.0.0_dev'

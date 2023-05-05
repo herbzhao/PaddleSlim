@@ -13,9 +13,10 @@
 # limitations under the License.
 import argparse
 import codecs
-import yaml
-import time
 import copy
+import time
+
+import yaml
 
 
 class AttrDict(dict):

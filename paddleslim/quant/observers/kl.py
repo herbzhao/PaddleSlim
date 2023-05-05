@@ -12,11 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import numpy as np
 import math
 
-from .base_hist import BaseHistObserver
+import numpy as np
 from paddle.quantization.factory import ObserverFactory
+
+from .base_hist import BaseHistObserver
 
 
 class KLObserver(ObserverFactory):

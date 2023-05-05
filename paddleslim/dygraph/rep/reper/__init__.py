@@ -12,14 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from . import diversebranchblock
-from . import acblock
-from . import repvgg
-from . import slimrep
-from . import base
-
-from .diversebranchblock import DiverseBranchBlock
+from . import acblock, base, diversebranchblock, repvgg, slimrep
 from .acblock import ACBlock
+from .diversebranchblock import DiverseBranchBlock
 from .repvgg import RepVGGBlock
 from .slimrep import SlimRepBlock
 

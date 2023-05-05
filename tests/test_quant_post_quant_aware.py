@@ -1,15 +1,18 @@
-import sys
 import random
+import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
-from paddleslim.quant import quant_aware, convert
-from paddleslim.quant import quant_aware, convert
+from paddleslim.quant import convert, quant_aware
 from static_case import StaticCase
+
 sys.path.append("../demo")
-from models import MobileNet
-from layers import conv_bn_layer
 import numpy as np
+from layers import conv_bn_layer
+
+from models import MobileNet
 
 np.random.seed(0)
 random.seed(0)

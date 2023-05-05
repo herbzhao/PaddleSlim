@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*
 
-import numpy as np
-import preprocess
+import io
 import logging
 import math
 import random
-import io
+
+import numpy as np
+import preprocess
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("paddle")

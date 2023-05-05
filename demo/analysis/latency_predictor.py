@@ -1,11 +1,10 @@
+import argparse
 import os
 import subprocess
-import argparse
 
 import paddle
-from paddleslim.analysis import TableLatencyPredictor
-
 from paddle.vision.models import mobilenet_v1, mobilenet_v2
+from paddleslim.analysis import TableLatencyPredictor
 
 opt_tool = 'opt_ubuntu'  # use in linux
 # opt_tool = 'opt_M1_mac'     # use in mac with M1 chip

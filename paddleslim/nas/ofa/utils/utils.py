@@ -13,9 +13,11 @@
 # limitations under the License.
 
 import logging
-import paddle
 import numbers
+
 import numpy as np
+import paddle
+
 from ....common import get_logger
 
 

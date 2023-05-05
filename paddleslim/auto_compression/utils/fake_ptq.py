@@ -1,9 +1,14 @@
 import os
+
 import paddle
 from paddle.fluid.framework import IrGraph
 from paddle.framework import core
-from paddle.static.quantization import QuantizationTransformPass, QuantizationTransformPassV2, AddQuantDequantPass, AddQuantDequantPassV2, QuantizationFreezePass, QuantWeightPass
-from paddle.static.quantization import utils
+from paddle.static.quantization import (AddQuantDequantPass,
+                                        AddQuantDequantPassV2,
+                                        QuantizationFreezePass,
+                                        QuantizationTransformPass,
+                                        QuantizationTransformPassV2,
+                                        QuantWeightPass, utils)
 
 try:
     from paddle.static.quantization import quant_config

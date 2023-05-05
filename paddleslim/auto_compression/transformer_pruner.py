@@ -13,13 +13,15 @@
 # limitations under the License.
 
 import logging
+
 import numpy as np
 import paddle
-from ..core import GraphWrapper
+
 from ..common import get_logger
+from ..common.patterns_common import has_trainable_var
 from ..common.recover_program import recover_inference_program
 from ..common.transformer_pattern import preprocess_transformer_patterns
-from ..common.patterns_common import has_trainable_var
+from ..core import GraphWrapper
 
 _logger = get_logger(__name__, level=logging.INFO)
 

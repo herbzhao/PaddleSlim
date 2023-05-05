@@ -1,15 +1,18 @@
 import os
 import sys
+import unittest
+
 import numpy as np
 from tqdm import tqdm
-import unittest
+
 sys.path.append("../../")
 import paddle
-from PIL import Image
 from paddle.vision.datasets import DatasetFolder
 from paddle.vision.transforms import transforms
 from paddleslim.auto_compression import AutoCompression
 from paddleslim.auto_compression.analysis import analysis_prune
+from PIL import Image
+
 paddle.enable_static()
 
 

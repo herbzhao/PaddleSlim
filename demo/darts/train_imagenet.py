@@ -12,27 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
+import argparse
+import ast
+import functools
+import logging
 import os
 import sys
-import ast
-import logging
-import argparse
-import functools
 
+import genotypes
 import paddle
 import paddle.fluid as fluid
+import reader
+from model import NetworkImageNet as Network
 from paddleslim.common import AvgrageMeter, get_logger
 from paddleslim.nas.darts import count_parameters_in_MB
 
-import genotypes
-import reader
-from model import NetworkImageNet as Network
 sys.path[0] = os.path.join(os.path.dirname("__file__"), os.path.pardir)
 from utility import add_arguments, print_arguments
+
 logger = get_logger(__name__, level=logging.INFO)
 
 parser = argparse.ArgumentParser(description=__doc__)

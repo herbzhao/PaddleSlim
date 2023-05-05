@@ -12,17 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-import os
-import numpy as np
-import time
-import sys
 import argparse
 import math
+import os
+import sys
+import time
 
+import numpy as np
 import paddle
 import paddle.inference as paddle_infer
 from ptq import ImageNetValDataset

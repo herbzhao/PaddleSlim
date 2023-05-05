@@ -12,14 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../../")
-import unittest
 import time
+import unittest
+
 import numpy as np
 import paddle
 from paddle.static import InputSpec as Input
-from paddleslim.dygraph import L1NormFilterPruner, L2NormFilterPruner, FPGMFilterPruner
-from paddleslim.dygraph import Status
+from paddleslim.dygraph import (FPGMFilterPruner, L1NormFilterPruner,
+                                L2NormFilterPruner, Status)
 
 
 class TestStatus(unittest.TestCase):

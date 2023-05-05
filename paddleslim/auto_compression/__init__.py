@@ -13,11 +13,12 @@
 # limitations under the License.
 
 from __future__ import absolute_import
-from .compressor import *
-from .strategy_config import *
-from .config_helpers import *
-from .utils import *
+
 from .analysis import *
+from .compressor import *
+from .config_helpers import *
+from .strategy_config import *
+from .utils import *
 
 __all__ = [
     "AutoCompression", "QuantAware", "QuantPost", "Distillation",

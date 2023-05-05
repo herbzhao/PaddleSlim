@@ -12,19 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-import cv2
-import numpy as np
 import argparse
-from tqdm import tqdm
-import pkg_resources as pkg
+import os
 import time
 
+import cv2
+import numpy as np
 import paddle
-from paddle.inference import Config
-from paddle.inference import create_predictor
+import pkg_resources as pkg
 from dataset import COCOValDataset
+from paddle.inference import Config, create_predictor
 from post_process import YOLOPostProcess, coco_metric
+from tqdm import tqdm
 
 
 def argsparser():
@@ -189,9 +188,9 @@ def get_current_memory_mb():
     except:
         from pip._internal import main
         main(['install', 'GPUtil'])
-    import pynvml
-    import psutil
     import GPUtil
+    import psutil
+    import pynvml
     gpu_id = int(os.environ.get('CUDA_VISIBLE_DEVICES', 0))
 
     pid = os.getpid()

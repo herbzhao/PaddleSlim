@@ -1,10 +1,12 @@
 import logging
+
 import numpy as np
 import paddle
 from paddleslim.common import get_logger
-from .var_group import *
-from .pruning_plan import *
+
 from .filter_pruner import FilterPruner
+from .pruning_plan import *
+from .var_group import *
 
 __all__ = ['L1NormFilterPruner']
 

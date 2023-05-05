@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import paddle
 import numpy as np
+import paddle
+from paddle.quantization.factory import ObserverFactory
 
 from .base_hist import BaseHistObserver
-from paddle.quantization.factory import ObserverFactory
 
 
 class HistObserver(ObserverFactory):

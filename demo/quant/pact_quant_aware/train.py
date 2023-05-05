@@ -1,25 +1,28 @@
-import os
-import sys
-import logging
-import paddle
 import argparse
 import functools
+import logging
 import math
-import time
-import numpy as np
+import os
 import random
+import sys
+import time
 from collections import defaultdict
+
+import numpy as np
+import paddle
 
 sys.path.append(os.path.dirname("__file__"))
 sys.path.append(
     os.path.join(os.path.dirname("__file__"), os.path.pardir, os.path.pardir))
-from paddleslim.common import get_logger, VarCollector
-from paddleslim.analysis import flops
-from paddleslim.quant import quant_aware, quant_post, convert
-import models
-from utility import add_arguments, print_arguments
 from paddle.common_ops_import import LayerHelper
 from paddle.distributed import fleet
+from paddleslim.analysis import flops
+from paddleslim.common import VarCollector, get_logger
+from paddleslim.quant import convert, quant_aware, quant_post
+from utility import add_arguments, print_arguments
+
+import models
+
 quantization_model_save_dir = './quantization_models/'
 
 _logger = get_logger(__name__, level=logging.INFO)

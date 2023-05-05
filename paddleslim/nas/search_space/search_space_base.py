@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import logging
+
 from ...common import get_logger
 
 __all__ = ['SearchSpaceBase']

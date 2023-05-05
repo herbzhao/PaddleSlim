@@ -12,13 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import logging
+import os
 import platform
-from ..common import get_logger
-from .utils.predict import predict_compressed_model, with_variable_shape
-from .strategy_config import *
+
 from paddleslim.analysis import TableLatencyPredictor
+
+from ..common import get_logger
+from .strategy_config import *
+from .utils.predict import predict_compressed_model, with_variable_shape
 
 _logger = get_logger(__name__, level=logging.INFO)
 

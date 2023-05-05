@@ -13,16 +13,20 @@
 # limitations under the License.
 
 import inspect
-import decorator
 import logging
 import numbers
+
+import decorator
 import paddle
+
 from ...common import get_logger
 from .utils.utils import get_paddle_version
+
 pd_ver = get_paddle_version()
-from .layers import *
 from . import layers
+from .layers import *
 from .layers_base import Block
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 __all__ = ['supernet', 'Convert']

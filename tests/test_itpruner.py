@@ -1,6 +1,8 @@
 import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
 from paddleslim.nas.itpruner import ITPruner
 from paddleslim.nas.itpruner.Cifar.nets.resnet_cifar import ResNetCifar

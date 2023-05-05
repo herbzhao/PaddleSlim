@@ -14,8 +14,9 @@
 
 import numpy as np
 import paddle
-from .uniform import UniformObserver
 from paddle.quantization.factory import ObserverFactory
+
+from .uniform import UniformObserver
 
 
 class AVGObserver(ObserverFactory):

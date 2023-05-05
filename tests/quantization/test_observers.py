@@ -13,23 +13,23 @@
 # limitations under the License.
 
 import sys
+
 sys.path.append("../../")
 import os
-import unittest
-import paddle
 import tempfile
-from paddle.vision.models import resnet18
-from paddle.quantization import QuantConfig
-from paddle.quantization import PTQ
+import unittest
 
-from paddleslim.quant.observers import HistObserver, KLObserver, EMDObserver, MSEObserver, AVGObserver
+import paddle
+from paddle.nn.quant.format import LinearDequanter, LinearQuanter
+from paddle.quantization import PTQ, QuantConfig
+from paddle.vision.models import resnet18
+from paddleslim.quant.observers import (AVGObserver, EMDObserver, HistObserver,
+                                        KLObserver, MSEObserver)
+from paddleslim.quant.observers.avg import AVGObserverLayer
+from paddleslim.quant.observers.emd import EMDObserverLayer
 from paddleslim.quant.observers.hist import PercentHistObserverLayer
 from paddleslim.quant.observers.kl import KLObserverLayer
 from paddleslim.quant.observers.mse import MSEObserverLayer
-from paddleslim.quant.observers.avg import AVGObserverLayer
-from paddleslim.quant.observers.emd import EMDObserverLayer
-from paddleslim.quant.observers.kl import KLObserverLayer
-from paddle.nn.quant.format import LinearDequanter, LinearQuanter
 
 
 class TestPTQObserver(unittest.TestCase):

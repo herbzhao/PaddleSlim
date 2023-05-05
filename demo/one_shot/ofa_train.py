@@ -17,8 +17,7 @@ import paddle
 import paddle.nn as nn
 import paddle.nn.functional as F
 from paddle.nn import ReLU
-from paddleslim.nas.ofa import OFA, RunConfig, DistillConfig
-from paddleslim.nas.ofa import supernet
+from paddleslim.nas.ofa import OFA, DistillConfig, RunConfig, supernet
 
 
 class Model(nn.Layer):

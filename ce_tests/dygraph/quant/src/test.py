@@ -1,19 +1,17 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-import os
-import numpy as np
-import time
-import sys
 import argparse
 import functools
 import math
+import os
+import sys
+import time
 
+import imagenet_dataset as dataset
+import numpy as np
 import paddle
 import paddle.inference as paddle_infer
 from utility import add_arguments, print_arguments
-import imagenet_dataset as dataset
 
 
 def eval(args):

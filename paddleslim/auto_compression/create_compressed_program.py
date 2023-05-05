@@ -13,18 +13,22 @@
 # limitations under the License.
 
 import logging
+
 import numpy as np
 import paddle
 import paddle.distributed.fleet as fleet
 import paddle.optimizer as optimizer
 import paddle.regularizer as regularizer
-from ..quant.quanter import quant_aware, _quant_config_default, _parse_configs, pact, get_pact_optimizer
-from ..dist import *
-from ..common.recover_program import recover_inference_program, _remove_fetch_node
-from ..common import get_logger
-from .strategy_config import ProgramInfo
-from ..common.load_model import load_inference_model
+
 from ..analysis import flops
+from ..common import get_logger
+from ..common.load_model import load_inference_model
+from ..common.recover_program import (_remove_fetch_node,
+                                      recover_inference_program)
+from ..dist import *
+from ..quant.quanter import (_parse_configs, _quant_config_default,
+                             get_pact_optimizer, pact, quant_aware)
+from .strategy_config import ProgramInfo
 
 _logger = get_logger(__name__, level=logging.INFO)
 __all__ = [
@@ -497,7 +501,8 @@ def build_prune_program(executor,
                         patterns,
                         eval_dataloader=None):
     if strategy.startswith('unstructure'):
-        from ..prune.unstructured_pruner import UnstructuredPruner, GMPUnstructuredPruner
+        from ..prune.unstructured_pruner import (GMPUnstructuredPruner,
+                                                 UnstructuredPruner)
         if config["prune_strategy"] is None:
             pruner = UnstructuredPruner(
                 train_program_info.program,
@@ -608,8 +613,8 @@ def remove_unused_var_nodes(program):
     Returns:
         program(paddle.static.Program): The sparse model.
     '''
-    from paddle.framework import core
     from paddle.fluid.framework import IrGraph
+    from paddle.framework import core
     graph = IrGraph(core.Graph(program.desc), for_test=True)
     removed_nodes = set()
     ops = graph.all_op_nodes()

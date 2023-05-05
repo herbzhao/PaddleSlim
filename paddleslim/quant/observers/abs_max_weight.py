@@ -14,8 +14,9 @@
 
 import numpy as np
 import paddle
-from .channel_wise import ChannelWiseObserver
 from paddle.quantization.factory import ObserverFactory
+
+from .channel_wise import ChannelWiseObserver
 
 
 class AbsMaxChannelWiseWeightObserver(ObserverFactory):

@@ -12,31 +12,32 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import division
-from __future__ import print_function
+from __future__ import division, print_function
 
 import argparse
-import six
-from inspect import isfunction
 import os
-import time
 import random
+import sys
+import time
+from inspect import isfunction
 from types import FunctionType
 from typing import Dict
+
 import numpy as np
-from PIL import Image
-
 import paddle
-from paddle.io import Dataset
-from paddle.vision.transforms import transforms
 import paddle.vision.models as models
-from paddle.quantization import QuantConfig
-from paddle.quantization import PTQ
+import six
+from paddle.io import Dataset
+from paddle.quantization import PTQ, QuantConfig
+from paddle.vision.transforms import transforms
+from paddleslim.quant.observers import (AbsMaxChannelWiseWeightObserver,
+                                        AVGObserver, EMDObserver, HistObserver,
+                                        KLObserver,
+                                        MSEChannelWiseWeightObserver,
+                                        MSEObserver)
+from PIL import Image
 from tqdm import tqdm
-from paddleslim.quant.observers import HistObserver, KLObserver, EMDObserver, MSEObserver, AVGObserver
-from paddleslim.quant.observers import MSEChannelWiseWeightObserver, AbsMaxChannelWiseWeightObserver
 
-import sys
 sys.path.append(os.path.dirname("__file__"))
 sys.path.append(
     os.path.join(os.path.dirname("__file__"), os.path.pardir, os.path.pardir))

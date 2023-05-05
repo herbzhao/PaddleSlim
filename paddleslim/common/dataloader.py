@@ -1,8 +1,10 @@
 import os
 import time
+from collections.abc import Iterable
+
 import numpy as np
 import paddle
-from collections.abc import Iterable
+
 from .load_model import load_inference_model
 
 __all__ = ["wrap_dataloader", "get_feed_vars"]

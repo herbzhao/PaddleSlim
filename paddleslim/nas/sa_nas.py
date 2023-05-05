@@ -12,19 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import hashlib
+import json
+import logging
 import os
 import socket
-import logging
-import numpy as np
-import json
-import hashlib
 import time
-import paddle
-from ..common import SAController
-from ..common import get_logger
 
-from ..common import ControllerServer
-from ..common import ControllerClient
+import numpy as np
+import paddle
+
+from ..common import (ControllerClient, ControllerServer, SAController,
+                      get_logger)
 from .search_space import SearchSpaceFactory
 
 __all__ = ["SANAS"]

@@ -12,11 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 import paddle
+
 sys.path.append("../")
 import unittest
-from paddleslim.prune import Pruner
+
 from layers import conv_bn_layer
+from paddleslim.prune import Pruner
 from static_case import StaticCase
 
 

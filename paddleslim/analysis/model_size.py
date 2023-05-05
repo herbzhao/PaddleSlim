@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import numpy as np
+
 from ..core import GraphWrapper
 
 __all__ = ["model_size"]

@@ -12,15 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import time
 import logging
 import os
 import shutil
 import sys
-import pkg_resources as pkg
+import time
+
 import paddle
+import pkg_resources as pkg
 
 from . import get_logger
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 __all__ = [

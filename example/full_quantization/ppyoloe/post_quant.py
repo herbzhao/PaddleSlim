@@ -12,16 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
 import os
 import sys
+
 import numpy as np
-import argparse
 import paddle
-from ppdet.core.workspace import load_config, merge_config
-from ppdet.core.workspace import create
-from paddleslim.quant import quant_post_static
 from paddleslim.common import load_config as load_slim_config
 from paddleslim.common.dataloader import get_feed_vars
+from paddleslim.quant import quant_post_static
+from ppdet.core.workspace import create, load_config, merge_config
 
 
 def argsparser():

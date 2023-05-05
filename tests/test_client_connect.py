@@ -12,18 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 import paddle
+
 sys.path.append("../")
 import os
-import time
 import signal
-import unittest
-from static_case import StaticCase
-from paddleslim.nas import SANAS
-from paddleslim.common.controller_client import ControllerClient
-import numpy as np
-from multiprocessing import Process
 import socket
+import time
+import unittest
+from multiprocessing import Process
+
+import numpy as np
+from paddleslim.common.controller_client import ControllerClient
+from paddleslim.nas import SANAS
+from static_case import StaticCase
 
 
 def start_client(configs, addr, port):

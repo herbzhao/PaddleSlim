@@ -1,9 +1,11 @@
 import os
 import sys
+
 sys.path.append("../")
 os.environ['FLAGS_enable_eager_mode'] = "1"
-import paddle
 import unittest
+
+import paddle
 from paddleslim.core import dygraph2program
 
 

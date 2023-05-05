@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 import paddle
+
 sys.path.append("../")
-import paddleslim.quant as quant
 import unittest
 
+import paddleslim.quant as quant
 from static_case import StaticCase
 
 

@@ -12,13 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
-import paddle
-from paddleslim.nas import RLNAS
-from paddleslim.analysis import flops
-from static_case import StaticCase
+
 import numpy as np
+import paddle
+from paddleslim.analysis import flops
+from paddleslim.nas import RLNAS
+from static_case import StaticCase
 
 
 def compute_op_num(program):

@@ -12,17 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import socket
 import logging
-import numpy as np
-from .pruner import Pruner
-from ..core import VarWrapper, OpWrapper, GraphWrapper
-from ..common import SAController
-from ..common import get_logger
-from ..analysis import flops
+import socket
 
-from ..common import ControllerServer
-from ..common import ControllerClient
+import numpy as np
+
+from ..analysis import flops
+from ..common import (ControllerClient, ControllerServer, SAController,
+                      get_logger)
+from ..core import GraphWrapper, OpWrapper, VarWrapper
+from .pruner import Pruner
 
 __all__ = ["AutoPruner"]
 

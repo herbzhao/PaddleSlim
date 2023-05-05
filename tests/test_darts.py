@@ -12,13 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
-import paddle
 import unittest
+
 import numpy as np
-from static_case import StaticCase
-from paddleslim.nas.darts import DARTSearch
+import paddle
 from layers import conv_bn_layer
+from paddleslim.nas.darts import DARTSearch
+from static_case import StaticCase
 
 
 class TestDARTS(unittest.TestCase):

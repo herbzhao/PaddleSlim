@@ -13,30 +13,30 @@
 # limitations under the License.
 
 import sys
+
 sys.path.append("../../")
+import logging
 import os
-import unittest
-import paddle
 import tempfile
+import unittest
+
 import numpy as np
-
+import paddle
+from paddle.nn.quant.format import LinearDequanter, LinearQuanter
+from paddle.quantization import PTQ, QuantConfig
 from paddle.vision.models import resnet18
-from paddle.quantization import QuantConfig
-from paddle.quantization import PTQ
-
-from paddleslim.quant.observers import HistObserver, KLObserver, EMDObserver, MSEObserver, AVGObserver
+from paddleslim.common import get_logger
+from paddleslim.quant.observers import (AVGObserver, EMDObserver, HistObserver,
+                                        KLObserver, MSEObserver)
+from paddleslim.quant.observers.abs_max_weight import \
+    AbsMaxChannelWiseWeightObserver
+from paddleslim.quant.observers.avg import AVGObserverLayer
+from paddleslim.quant.observers.emd import EMDObserverLayer
 from paddleslim.quant.observers.hist import PercentHistObserverLayer
 from paddleslim.quant.observers.kl import KLObserverLayer
 from paddleslim.quant.observers.mse import MSEObserverLayer
-from paddleslim.quant.observers.avg import AVGObserverLayer
-from paddleslim.quant.observers.emd import EMDObserverLayer
-from paddleslim.quant.observers.kl import KLObserverLayer
 from paddleslim.quant.observers.mse_weight import MSEChannelWiseWeightObserver
-from paddleslim.quant.observers.abs_max_weight import AbsMaxChannelWiseWeightObserver
-from paddle.nn.quant.format import LinearDequanter, LinearQuanter
 
-import logging
-from paddleslim.common import get_logger
 _logger = get_logger(__name__, level=logging.INFO)
 
 

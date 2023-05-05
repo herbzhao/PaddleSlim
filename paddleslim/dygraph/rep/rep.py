@@ -13,10 +13,11 @@
 # limitations under the License.
 
 import logging
+
 import paddle.nn as nn
 
 from ...common import get_logger
-from .config import BaseRepConfig, SUPPORT_REP_TYPE_LAYERS
+from .config import SUPPORT_REP_TYPE_LAYERS, BaseRepConfig
 
 _logger = get_logger(__name__, level=logging.INFO)
 

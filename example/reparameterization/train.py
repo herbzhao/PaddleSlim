@@ -12,28 +12,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
-import os
-import sys
-import logging
-import paddle
 import argparse
-import functools
-import math
-import time
-import random
-import numpy as np
 import distutils.util
+import functools
+import logging
+import math
+import os
+import random
+import sys
+import time
+
+import numpy as np
+import paddle
+import paddle.vision.transforms as T
 import six
 from paddle.distributed import ParallelEnv
 from paddle.static import load_program_state
 from paddle.vision.models import mobilenet_v1
-import paddle.vision.transforms as T
 from paddleslim.common import get_logger
-from paddleslim.dygraph.rep import Reparameter, DBBRepConfig, ACBRepConfig
+from paddleslim.dygraph.rep import ACBRepConfig, DBBRepConfig, Reparameter
 
 sys.path.append(os.path.join(os.path.dirname("__file__")))
 from optimizer import create_optimizer

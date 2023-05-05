@@ -13,11 +13,13 @@
 # limitations under the License.
 
 from typing import Dict
+
 import numpy as np
 import paddle
+from paddle.quantization.factory import ObserverFactory
+
 from .mse import MSEObserverLayer
 from .uniform import UniformObserver
-from paddle.quantization.factory import ObserverFactory
 
 CHANNEL_AXIS: Dict[type, int] = {
     paddle.nn.Conv2D: 0,

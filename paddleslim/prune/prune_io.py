@@ -1,9 +1,11 @@
-import os
-import paddle
-from ..core import GraphWrapper
-from ..common import get_logger
 import json
 import logging
+import os
+
+import paddle
+
+from ..common import get_logger
+from ..core import GraphWrapper
 
 __all__ = ["save_model", "load_model"]
 

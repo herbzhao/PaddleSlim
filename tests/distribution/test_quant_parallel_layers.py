@@ -12,30 +12,36 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import unittest
-import sys
 import os
-import unittest
-import paddle
-import tempfile
 import random
+import sys
+import tempfile
+import unittest
+
 import numpy as np
+import paddle
+
 sys.path.append("../../")
+import logging
+
 import paddle
 import paddle.distributed as dist
 import paddle.distributed.fleet as fleet
 import paddle.fluid as fluid
 import paddle.nn as nn
+from paddle.distributed.fleet.meta_parallel import (ColumnParallelLinear,
+                                                    RowParallelLinear,
+                                                    VocabParallelEmbedding)
 from paddle.distributed.utils.launch_utils import find_free_ports, get_cluster
-from paddle.quantization import QuantConfig
-from paddle.quantization import QAT
-from paddle.quantization.quanters import FakeQuanterWithAbsMaxObserver
-from paddle.quantization.quanters.abs_max import FakeQuanterWithAbsMaxObserverLayer
 from paddle.nn.quant.format import LinearDequanter, LinearQuanter
-from paddle.distributed.fleet.meta_parallel import ColumnParallelLinear, RowParallelLinear, VocabParallelEmbedding
-from paddleslim.quant.layers import QuantizedColumnParallelLinear, QuantizedRowParallelLinear
-import logging
+from paddle.quantization import QAT, QuantConfig
+from paddle.quantization.quanters import FakeQuanterWithAbsMaxObserver
+from paddle.quantization.quanters.abs_max import \
+    FakeQuanterWithAbsMaxObserverLayer
 from paddleslim.common import get_logger
+from paddleslim.quant.layers import (QuantizedColumnParallelLinear,
+                                     QuantizedRowParallelLinear)
+
 _logger = get_logger(__name__, level=logging.INFO)
 
 

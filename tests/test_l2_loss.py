@@ -12,12 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
+
 sys.path.append("../")
 import unittest
+
 import paddle
-from static_case import StaticCase
-from paddleslim.dist import merge, l2
 from layers import conv_bn_layer
+from paddleslim.dist import l2, merge
+from static_case import StaticCase
 
 
 class TestL2Loss(StaticCase):
